@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Listas</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Minha Lista de Compras</h1>
+
+  <h2>Hortifruti:</h2>
+  <ul>
+    <li>Alface</li>
+    <li>Batata</li>
+    <li>Maçãs</li>
+  </ul>
+
+  <h2>Padaria:</h2>
+  <ul>
+    <li>Pão integral</li>
+    <li>Bolos</li>
+    <li>Pão de forma</li>
+  </ul>
+
+  <h2>Higiene Pessoal:</h2>
+  <ul>
+    <li>Sabonete</li>
+    <li>Shampoo</li>
+    <li>Condicionador</li>
+  </ul>
+
+  <h2>Mercearia:</h2>
+  <ul>
+    <li>Arroz</li>
+    <li>Feijão</li>
+    <li>Macarrão</li>
+  </ul>
+
+  <h2>Carnes:</h2>
+  <ul>
+    <li>Peito de frango</li>
+    <li>Carne moída</li>
+    <li>Salsichas</li>
+  </ul>
+
+    <h1>Como Trocar uma Lâmpada</h1>
+
+    <ol>
+      <li>Desligue a energia: Certifique-se de que a energia elétrica esteja desligada no interruptor ou disjuntor
+        correspondente para garantir sua segurança.</li>
+
+      <li>Escolha a lâmpada: Certifique-se de escolher uma lâmpada que tenha o mesmo tipo e potência da lâmpada antiga.
+      </li>
+
+      <li>Pegue as ferramentas necessárias: Você precisará de uma escada ou um suporte estável, caso a lâmpada esteja em
+        um local alto.</li>
+
+      <li>Remova a lâmpada antiga: Com cuidado, desenrosque ou desconecte a lâmpada antiga do soquete.</li>
+
+      <li>Descarte corretamente: Se a lâmpada antiga estiver queimada, descarte-a de acordo com as regulamentações
+        locais de reciclagem de lâmpadas.</li>
+
+      <li>Insira a lâmpada nova: Parafuse ou conecte a nova lâmpada no soquete, certificando-se de que esteja firme.
+      </li>
+
+      <li>Restabeleça a energia: Ligue a energia de volta no interruptor ou disjuntor.</li>
+
+      <li>Verifique a nova lâmpada: Ligue a luz para garantir que a lâmpada nova esteja funcionando corretamente.</li>
+    </ol>
+
+    <h1>Lista de Alunos e Notas</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Nota 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aluno 1</td>
+                <td>8.5</td>
+                <td>7.0</td>
+                <td>9.2</td>
+                <td>6.8</td>
+            </tr>
+            <tr>
+                <td>Aluno 2</td>
+                <td>9.0</td>
+                <td>8.5</td>
+                <td>7.5</td>
+                <td>9.8</td>
+            </tr>
+            <tr>
+                <td>Aluno 3</td>
+                <td>7.2</td>
+                <td>6.5</td>
+                <td>8.0</td>
+                <td>7.7</td>
+            </tr>
+            <tr>
+                <td>Aluno 4</td>
+                <td>8.0</td>
+                <td>8.0</td>
+                <td>7.0</td>
+                <td>8.5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br>    
+
+    <h1>Informações de Idade e Peso</h1>
+
+    <table border="1">
+        <tr>
+            <th rowspan="2"> </th>
+            <th colspan="2">Informações</th>
+        </tr>
+        <tr>
+            <th>Idade</th>
+            <th>Peso</th>
+        </tr>
+        <tr>
+            <th rowspan="2">Homens</th>
+            <td>18</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>72</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Mulheres</th>
+            <td>25</td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>70</td>
+        </tr>
+
+    </table>
+
+    <br>
+    <br>
+
+    <h1>Informações de Idade e Peso (Estilizado)</h1>
+
+    <Style>
+
+        .grey {
+            background-color: #ccc;
+        }
+        
+        .customTable {
+            border-collapse: collapse;
+            width: 600px;
+            font-size: 16px;
+            color: #555
+        }
+
+        .customTable td {
+            text-align: center;
+        }
+
+    </Style>
+
+    <table border="1" class="customTable">
+        <tr class="grey">
+            <th rowspan="2"> </th>
+            <th colspan="2">Informações</th>
+        </tr>
+        <tr class="grey">
+            <th>Idade</th>
+            <th>Peso</th>
+        </tr>
+        <tr>
+            <th rowspan="2" class="grey">Homens</th>
+            <td>18</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>72</td>
+        </tr>
+        <tr>
+            <th rowspan="2" class="grey">Mulheres</th>
+            <td>25</td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>70</td>
+        </tr>
+
+    </table>
+
+    <br>
+    <br>
+
+    <h1>Tabela de Filmes</h1>
+
+    <style>
+        .table-movie {
+            border-collapse: collapse;
+        }
+
+        .table-movie th, .table-movie td {
+            border: 1px solid #ffffff;
+            padding: 5px;
+            text-align: center;
+            background-color: #2b2b2b;
+            color: #fff;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        img {
+            max-width: 100px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+    </style>
+
+    
+    <table class="table-movie">
+        <tr>
+            <th>Nome</th>
+            <th>Nota</th>
+            <th>Imagem</th>
+            <th>Atores</th>
+        </tr>
+        <tr>
+            <td><a href="https://www.imdb.com/title/tt0468569/" target="_blank">Batman: O Cavaleiro das Trevas</a></td>
+            <td>9.0</td>
+            <td><img src="./assets/images/dark_knight.jpg" alt="Batman: O Cavaleiro das Trevas"></td>
+            <td>Christian Bale, Heath Ledger</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.imdb.com/title/tt0816692/" target="_blank">Interestelar</a></td>
+            <td>8.7</td>
+            <td><img src="./assets/images/interestellar.jpg" alt="Interestelar"></td>
+            <td>Matthew McConaughey, Anne Hathaway</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.imdb.com/title/tt1856101/" target="_blank">Blade Runner 2049</a></td>
+            <td>8.0</td>
+            <td><img src="./assets/images/blade_runner_2049.jpg" alt="Blade Runner 2049"></td>
+            <td>Ryan Gosling., Harrison Ford</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.imdb.com/title/tt0289879/" target="_blank">Efeito Borboleta</a></td>
+            <td>9.4</td>
+            <td><img src="./assets/images/efeito_borboleta.jpg" alt="Efeito Borboleta"></td>
+            <td>Ashton Kutcher, Amy Smart</td>
+        </tr>
+    </table>
+    
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+.container-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-services {
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-inline: 5rem;
+}
+
+.card-service {
+    height: 90%;
+    width: 12%;
+    background-color: var(--color3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-service :nth-child(1) {
+    font-size: 5rem;
+    color: var(--color2);
+}
+
+.card-service :nth-child(2) {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color2);
+}
+
+.technologies {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline:5rem ;
+}
+
+.languages-list {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.language-card {
+    height: 25rem;
+    width: 25rem;
+    flex: 0 0 calc(25.33% - 1rem);
+    margin: 5px; 
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+}
+
+.language-card figure img {
+    width: 22.5rem;
+    height: 21rem;
+}
+
+.local {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h3 {
+    color: var(--color1);
+    font-size: 2rem;
+}
+
+.social {
+    width: 35%;
+    height: 30rem;
+}
+
+.social .social-media {
+    margin-top: 1rem;
+    height: 22rem;
+    font-size: 1.8rem;
+    display: grid;
+    color: var(--color2);
+}
+
+

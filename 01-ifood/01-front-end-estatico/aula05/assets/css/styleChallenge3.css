@@ -1,0 +1,66 @@
+/* configurações */
+
+a,
+h1 {
+    color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.challenges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+h1 {
+    display: grid;
+    place-items: center;
+}
+
+/* Desafio 2 */
+
+.box1 {
+    height: 100px;
+    width: 100px;
+    background: lightblue;
+    border: 1px solid black;
+    right: 222px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box2 {
+    height: 100px;
+    width: 100px;
+    background: lightcoral;
+    border: 1px solid black;
+    left: 158px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+
+.box3 {
+    height: 100px;
+    width: 100px;
+    background: lightcyan;
+    border: 1px solid black;
+    right: 300px;
+    bottom: 100px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+
+.box4 {
+    height: 100px;
+    width: 100px;
+    background: lightgoldenrodyellow;
+    border: 1px solid black;
+    top: 0;
+    left: 300px;
+    position: fixed;
+
+}

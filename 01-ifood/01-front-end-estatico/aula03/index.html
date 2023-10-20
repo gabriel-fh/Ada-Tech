@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Formulário de Agendamento</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <br>
+            <br>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="18" required>
+
+            <br>
+            <br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}-[9]{1}[0-9]{3}-[0-9]{4}"
+                placeholder="(11) 9999-9999" required>
+
+            <br>
+            <br>
+
+            <fieldset class="gender">
+                <legend>Gênero:</legend>
+                <label>
+                    <input type="radio" name="genero" value="masculino">
+                    Masculino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="feminino">
+                    Feminino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="outro">
+                    Outro
+                </label>
+            </fieldset>
+
+            <br>
+
+            <section>
+                <div>
+                    <label for="data-nascimento">Data de Nascimento:</label>
+                    <input type="date" id="data-nascimento" name="data-nascimento" required min="1900-01-01"
+                        max="2005-01-01">
+                </div>
+
+                <div>
+                    <label for="horario">Horário de Atendimento:</label>
+                    <input type="time" id="horario" name="horario" required min="07:00" max="17:00">
+                </div>
+            </section>
+            <br>
+
+            <fieldset class="checkbox-container">
+                <legend>Lista de Hobbies:</legend>
+                <div class="options-container">
+                    <label>
+                        <input type="checkbox" name="hobbies" value="esporte">
+                        Esporte
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobbies" value="musica">
+                        Música
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobbies" value="leitura">
+                        Leitura
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobbies" value="viagem">
+                        Viagem
+                    </label>
+                </div>
+                <div class="options-container">
+                    <label>
+                        <input type="checkbox" name="hobbies" value="cozinhar">
+                        Cozinhar
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobbies" value="jogos">
+                        Jogos
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobbies" value="artesanato">
+                        Artesanato
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobbies" value="jardinagem">
+                        Jardinagem
+                    </label>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="checkbox-container">
+                <legend>Cor Preferida:</legend>
+                <div class="options-container">
+                    <label>
+                        <input type="checkbox" name="cor-preferida" value="vermelho">
+                        Vermelho
+                    </label>
+                    <label>
+                        <input type="checkbox" name="cor-preferida" value="azul">
+                        Azul
+                    </label>
+                    <label>
+                        <input type="checkbox" name="cor-preferida" value="verde">
+                        Verde
+                    </label>
+                    <label>
+                        <input type="checkbox" name="cor-preferida" value="amarelo">
+                        Amarelo
+                    </label>
+                </div>
+
+                <div class="options-container">
+                    <label>
+                        <input type="checkbox" name="cor-preferida" value="roxo">
+                        Roxo
+                    </label>
+                    <label>
+                        <input type="checkbox" name="cor-preferida" value="laranja">
+                        Laranja
+                    </label>
+                    <label>
+                        <input type="checkbox" name="cor-preferida" value="rosa">
+                        Rosa
+                    </label>
+                    <label>
+                        <input type="checkbox" name="cor-preferida" value="preto">
+                        Preto
+                    </label>
+                </div>
+            </fieldset>
+            <br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
