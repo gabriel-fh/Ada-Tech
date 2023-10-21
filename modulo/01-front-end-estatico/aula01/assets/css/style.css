@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --textColor: #fff;
+    --darkCyan: darkcyan
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(18, 10, 48);
+}
+
+h2,
+h3,
+p {
+    color: var(--textColor)
+}
+
+.main {
+    min-height: 100vh;
+    padding: 2rem 0 2rem 0;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-title {
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.photo {
+    width: 17.7rem;
+    height: 17.7rem;
+    border-radius: 50%;
+    box-shadow: 1.6rem 1.4rem 2rem #0000008c;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.photo::before {
+    content: "";
+    border-radius: 50%;
+    background-image: conic-gradient(from 180deg, transparent, darkcyan);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: girar 1s linear infinite;
+}
+
+.photo::after {
+    content: "";
+    height: 17rem;
+    width: 17rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/118220737.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+}
+
+.name h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.name h2::before {
+    content: "";
+    width: 35rem;
+    height: .3rem;
+    background-color: var(--darkCyan);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: .7rem;
+}
+
+.name h3::after {
+    content: "";
+    width: 10rem;
+    height: .3rem;
+    background-color: var(--darkCyan);
+    display: block;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+.name h3 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.about-me {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.about-me h2 {
+    font-size: 2.7rem;
+    padding: 2.5rem 0 5rem 0;
+}
+
+.about-me p {
+    font-size: 1.6rem;
+}
+
+.desc-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.description {
+    width: 60rem;
+    min-height: auto;
+    text-align: justify;
+}
+
+.ilustration {
+    width: 60rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ilustration img {
+    width: 50rem;
+    height: 50rem;
+}
+
+.social {
+    margin-top: 3rem;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.6rem;
+}
+
+.social h2 {
+    font-size: 2.7rem;
+    padding: 2.5rem 0 2rem 0;
+}
+
+.social p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
