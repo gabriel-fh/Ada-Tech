@@ -1,0 +1,175 @@
+.restaurant-container {
+    min-height: 52vh;
+    padding: 2rem 1.5rem;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.restaurant-card-container {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.restaurant-card {
+    margin-top: 2.5rem;
+    background-color: var(--light-gray);
+    border-radius: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10.5rem;
+    width: 34.5rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    overflow: hidden;
+}
+
+.restaurant-card figure {
+    height: 100%;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.restaurant-card figure img {
+    height: 100%;
+    width: 11.9rem;
+    overflow: hidden;
+}
+
+.restaurant-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+
+.restaurant-info .restaurant-title {
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+.restaurant-info .rating-type {
+    font-size: 1.4rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.restaurant-info .rating-type :first-child {
+    font-size: 1.7rem;
+    margin-right: .5rem;
+    color: var(--gold);
+}
+
+.restaurant-info .rating-type :nth-child(2) {
+    color: var(--gold);
+    margin-right: .5rem;
+}
+
+.restaurant-info .rating-type :nth-child(3) {
+    color: var(--silver);
+    margin-left: .5rem;
+}
+
+.restaurant-info .restaurant-description {
+    font-size: 1.4rem;
+}
+
+/* Responsividade */
+
+/* tablet */
+@media screen and (min-width: 768px) { 
+    
+    .restaurant-container {
+        padding-inline: 2.5rem;
+    }
+
+    .restaurant-card-container {
+        min-height: 70vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .restaurant-card {
+        height: 12.5rem;
+    }
+    
+    .restaurant-card figure img {
+        width: 14.6rem;
+    }
+
+    .restaurant-info .restaurant-title {
+        font-size: 2rem;
+    }
+    
+    .restaurant-info .rating-type {
+        font-size: 1.7rem;
+    }
+    
+    .restaurant-info .rating-type :first-child {
+        font-size: 1.9rem;
+        margin-right: .5rem;
+    }
+    
+    .restaurant-info .rating-type :nth-child(2) {
+        font-weight: 500;
+    }
+    
+    .restaurant-info .rating-type :nth-child(3) {
+        color: var(--silver);
+        margin-left: .5rem;
+    }
+    
+    .restaurant-info .restaurant-description {
+        font-size: 1.6rem;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) { 
+    
+    .restaurant-container {
+        margin-top: 2rem;
+        padding-inline: 10rem;
+    }
+
+    .restaurant-card-container {
+        min-height: 60vh;
+    }
+    
+    .restaurant-card {
+        height: 15.5rem;
+        width: 40rem;
+    }
+    .restaurant-card figure img {
+        width: 17.8rem;
+    }
+
+    .restaurant-info .restaurant-title {
+        font-size: 2.5rem;
+    }
+    
+    .restaurant-info .rating-type {
+        font-size: 2rem;
+    }
+    
+    .restaurant-info .rating-type :first-child {
+        font-size: 2.4rem;
+    }
+    
+    .restaurant-info .rating-type :nth-child(3) {
+        color: var(--silver);
+        margin-left: .5rem;
+    }
+    
+    .restaurant-info .restaurant-description {
+        font-size: 1.7rem;
+    }
+}

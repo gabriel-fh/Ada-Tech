@@ -1,0 +1,218 @@
+.home-container {
+    padding: 1.2rem;
+    height: auto;
+}
+
+.title-img-container {
+    height: 50vh;
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.title-description h1 {
+    color: var(--red);
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+    flex: 1;
+    letter-spacing: .1rem;
+}
+
+.title-description p {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 90%;
+    letter-spacing: .1rem;
+}
+
+.btn-try-it-now {
+    background-color: var(--red);
+    border: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+}
+
+.btn-try-it-now :first-child {
+    text-decoration: none;
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-top: 2.5rem;
+}
+
+.image-container figure img {
+    height: 16rem;
+    width: 16rem;
+    filter: drop-shadow(-7px 9px 24px var(--silver));
+}
+
+.home-card-msg-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.home-card-msg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    width: 48%;
+    margin-bottom: 3rem;
+}
+
+.home-card-msg iconify-icon {
+    font-size: 3rem;
+    color: var(--red);
+    margin-bottom: .7rem;
+}
+
+.home-card-msg:nth-child(1) iconify-icon:nth-child(1) {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+.home-card-msg p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Responsividade */
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    .home-container {
+        padding: 2.5rem;
+    }
+
+    .title-img-container {
+        justify-content: center;
+        flex-wrap: nowrap;
+        height: 35vh;
+    }
+
+    .title-description h1 {
+        font-size: 3.5rem;
+        letter-spacing: .1rem;
+    }
+
+    .title-description p {
+        font-size: 2rem;
+    }
+
+    .btn-try-it-now {
+        padding: 1rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .image-container figure img {
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .home-card-msg-container {
+        margin-top: 4rem;
+    }
+
+    .home-card-msg {
+        width: 40%;
+        margin-bottom: 3.5rem;
+    }
+
+    .home-card-msg iconify-icon {
+        font-size: 5rem;
+    }
+
+    .home-card-msg:nth-child(1) iconify-icon:nth-child(1) {
+        font-size: 6rem;
+    }
+
+    .home-card-msg p {
+        font-size: 2rem;
+        /* width: 80%; */
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) {
+    .home-container {
+        display: grid;
+        place-items: center;
+    }
+    
+    .title-img-container {
+        align-self: center;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        width: 90%;
+        height: 50vh;
+        margin-top: 5rem;
+    }
+
+    .title-description {
+        width: 55%;
+    }
+
+    .title-description h1 {
+        font-size: 5rem;
+    }
+
+    .title-description p {
+        font-size: 3rem;
+        width: 100%;
+        line-height: 4rem;
+    }
+
+    .btn-try-it-now {
+        padding: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .image-container {
+        justify-content: flex-end;
+        margin-top: 0rem;   
+    }
+    
+    .image-container figure img {
+        height: 35rem;
+        width: 35rem;
+    }
+
+    .home-card-msg-container {
+        width: 90%;
+        margin-top: 3rem;
+    }
+
+    .home-card-msg {
+        width: 20%;
+    }
+
+    .home-card-msg iconify-icon {
+        font-size: 7rem;
+    }
+
+    .home-card-msg:nth-child(1) iconify-icon:nth-child(1) {
+        font-size: 8rem;
+        margin-bottom: 0;
+    }
+
+    .home-card-msg p {
+        font-size: 2.5rem;
+    }
+
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFood</title>
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/restaurant.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
+
+
+    <script src="./assets/js/index.js" defer></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <svg width="50" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M26.139 8.93923C28.385 5.49259 31.3529 4.90948 32.9572 5.07662C34.5615 5.24376 37.1016 5.968 36.9679 9.38492C36.8227 13.0963 34.8289 14.8817 33.492 15.9216C30.5508 18.2095 27.0749 17.4073 25.8716 16.3673C25.5379 16.0789 23.3315 13.2475 26.139 8.93923Z"
+                    fill="#EA1D2C" />
+                <path
+                    d="M14.107 8.93923C16.353 5.49259 19.3209 4.90948 20.9252 5.07662C22.5294 5.24376 25.0696 5.968 24.9359 9.38492C24.7907 13.0963 22.7968 14.8817 21.4599 15.9216C18.5187 18.2095 15.0428 17.4073 13.8396 16.3673C13.5059 16.0789 11.2995 13.2475 14.107 8.93923Z"
+                    fill="#EA1D2C" />
+                <path d="M6.81818 0H3.07487L2.40642 3.41692H6.14973L6.81818 0Z" fill="#EA1D2C" />
+                <path d="M5.88235 5.34823H2.13904L0 17.2332H3.74332L5.88235 5.34823Z" fill="#EA1D2C" />
+                <path
+                    d="M16.5775 0.594247C10.9091 -1.54504 8.51159 2.8722 8.02139 5.34823H6.81818L6.41711 7.72521H7.62032L5.34759 20.5015H9.09091L11.3636 7.72521H14.1711L14.5722 5.34823H11.8984C11.8984 1.90159 14.7504 2.42651 16.1765 3.1198L16.5775 0.594247Z"
+                    fill="#EA1D2C" />
+                <path
+                    d="M29.1444 22.73C20.0535 30.6929 13.6809 24.5622 11.631 20.5015C14.3048 33.4069 26.3369 30.9009 31.4171 26.1469L32.4866 29.7124L34.2246 20.5015H26.738L29.1444 22.73Z"
+                    fill="#EA1D2C" />
+                <path
+                    d="M50 0.297119L47.0588 17.2332H43.1818L43.6403 14.7076C42.3796 17.0846 37.1657 18.8673 36.7647 14.8562C36.5864 13.321 36.8449 9.44853 39.8395 6.83384C42.8342 4.21915 44.6524 5.19966 45.3126 5.49679L46.2567 0.297119H50Z"
+                    fill="#EA1D2C" />
+            </svg>
+        </a>
+
+        <nav class="navigation ">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Cardápio</a></li>
+                <li><a href="#restaurant">Restaurantes</a></li>
+                <li><a href="#contact">Fale Conosco</a></li>
+            </ul>
+        </nav>
+        <div class="btn-menu-hamburger isClose">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="home-container" id="home">
+            <section class="title-img-container">
+                <div class="title-description">
+                    <h1>Saboreie a Inovação</h1>
+                    <p>Descubra a revolução do iFood. Entrega mais rápida, escolhas infinitas e uma experiência de sabor
+                        sem igual.</p>
+                    <button type="button" class="btn-try-it-now">
+                        <a href="">
+                            Experimente agora!
+                        </a>
+                    </button>
+                </div>
+                <div class="image-container">
+                    <figure>
+                        <img src="./assets/images/home-image/macarrao.webp" alt="Miojo" draggable="false">
+                    </figure>
+                </div>
+            </section>
+            <section class="home-card-msg-container">
+                <div class="home-card-msg">
+                    <iconify-icon icon="ic:round-delivery-dining"></iconify-icon>
+                    <p>O jeito mais fácil de pedir comida</p>
+                </div>
+                <div class="home-card-msg">
+                    <iconify-icon icon="clarity:star-solid"></iconify-icon>
+                    <p>Leia as avaliações de restaurantes</p>
+                </div>
+                <div class="home-card-msg">
+                    <iconify-icon icon="ion:restaurant"></iconify-icon>
+                    <p>Escolha pratos deliciosos.</p>
+                </div>
+                <div class="home-card-msg">
+                    <iconify-icon icon="bi:phone-fill"></iconify-icon>
+                    <p>Faça seu pedido pela internet.</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="menu-container" id="menu">
+            <h2>Explorar Culinárias</h2>
+
+            <section class="food-card-container"> 
+
+                <section class="food-card">
+
+                    <figure><img src="./assets/images/food-images/churras.webp" alt="Churrasco" draggable="false">
+                    </figure>
+
+                    <div class="food-card-description">
+
+                        <span class="food-card-title">Churrasco</span>
+                        <span class="food-description">
+                            Um festivo churrasco, com suculentas carnes grelhadas e sabor defumado. 
+                        </span>
+
+                        <div class="food-card-footer">
+                            <div class="food-price">
+                                <span>R$50,00</span>
+                                <span>R$45,00</span>
+                            </div>
+                            <div class="food-time">
+                                <iconify-icon icon="radix-icons:timer"></iconify-icon>
+                                <span>15-20min</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+                <section class="food-card">
+
+                    <figure><img src="./assets/images/food-images/shushi.webp" alt="shushi" draggable="false">
+                    </figure>
+
+                    <div class="food-card-description">
+
+                        <span class="food-card-title">California Roll</span>
+                        <span class="food-description">Um clássico rolo de sushi com abacate, pepino e carne de
+                            caranguejo.</span>
+
+                        <div class="food-card-footer">
+                            <div class="food-price">
+                                <span>R$45,00</span>
+                                <span>R$35,00</span>
+                            </div>
+                            <div class="food-time">
+                                <iconify-icon icon="radix-icons:timer"></iconify-icon>
+                                <span>15-20min</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+                <section class="food-card">
+
+                    <figure><img src="./assets/images/food-images/pizza.webp" alt="Pizza" draggable="false">
+                    </figure>
+
+                    <div class="food-card-description">
+
+                        <span class="food-card-title">Pizza</span>
+                        <span class="food-description">Uma pizza tradicional com molho de tomate, mussarela, manjericão e azeite de oliva.</span>
+
+                        <div class="food-card-footer">
+                            <div class="food-price">
+                                <span>R$60,00</span>
+                                <span>R$45,00</span>
+                            </div>
+                            <div class="food-time">
+                                <iconify-icon icon="radix-icons:timer"></iconify-icon>
+                                <span>20-40min</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+                <section class="food-card">
+
+                    <figure><img src="./assets/images/food-images/estrogonofe.webp" alt="Estrogonofe" draggable="false">
+                    </figure>
+
+                    <div class="food-card-description">
+
+                        <span class="food-card-title">Estrogonofe</span>
+                        <span class="food-description">O conforto em cada colherada. Um estrogonofe irresistivel, e saboroso."</span>
+
+                        <div class="food-card-footer">
+                            <div class="food-price">
+                                <span>R$30,00</span>
+                                <span>R$20,00</span>
+                            </div>
+                            <div class="food-time">
+                                <iconify-icon icon="radix-icons:timer"></iconify-icon>
+                                <span>20-30min</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+            </section> 
+
+        </section>
+
+        <section class="restaurant-container" id="restaurant">
+            <h2>Top Restaurantes</h2>
+            <section class="restaurant-card-container">
+                <section class="restaurant-card">
+                    <figure>
+                        <img src="./assets/images/restaurant-images/nork-burger.webp" alt="Nork Burger"
+                            draggable="false">
+                    </figure>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-title">Nork Burger</h3>
+                        <div class="rating-type">
+                            <iconify-icon icon="ph:star-fill"></iconify-icon>
+                            <span>4,5</span> •
+                            <span>Hamburgueria</span>
+                        </div>
+                        <span class="restaurant-description">
+                            Saboreie hambúrgueres suculentos como nunca antes.
+                        </span>
+                    </div>
+                </section>
+                <section class="restaurant-card">
+                    <figure>
+                        <img src="./assets/images/restaurant-images/encanteria.webp" alt="Encanteria" draggable="false">
+                    </figure>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-title">Encanteria</h3>
+                        <div class="rating-type">
+                            <iconify-icon icon="ph:star-fill"></iconify-icon>
+                            <span>4,5</span> •
+                            <span>Brasileira</span>
+                        </div>
+                        <span class="restaurant-description">
+                            Sabores brasileiros que aquecem o coração em cada prato."
+                        </span>
+                    </div>
+                </section>
+                <section class="restaurant-card">
+                    <figure>
+                        <img src="./assets/images/restaurant-images/o-fornes.webp" alt="O Fornês" draggable="false">
+                    </figure>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-title">O Fornês</h3>
+                        <div class="rating-type">
+                            <iconify-icon icon="ph:star-fill"></iconify-icon>
+                            <span>4,5</span> •
+                            <span>Pizzaria</span>
+                        </div>
+                        <span class="restaurant-description">
+                            O paraíso da pizza, onde cada fatia é uma explosão de sabor.
+                        </span>
+                    </div>
+                </section>
+                <section class="restaurant-card">
+                    <figure>
+                        <img src="./assets/images/restaurant-images/moringa.webp" alt="Moringa" draggable="false">
+                    </figure>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-title">Moringa</h3>
+                        <div class="rating-type">
+                            <iconify-icon icon="ph:star-fill"></iconify-icon>
+                            <span>4,5</span> •
+                            <span>Vegana</span>
+                        </div>
+                        <span class="restaurant-description">
+                            Um paraíso de sabores veganos, onde a natureza encontra a culinária.
+                        </span>
+                    </div>
+                </section>
+                <section class="restaurant-card">
+                    <figure>
+                        <img src="./assets/images/restaurant-images/seiko.webp" alt="Seiko-Sushi" draggable="false">
+                    </figure>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-title">Seiko Sushi</h3>
+                        <div class="rating-type">
+                            <iconify-icon icon="ph:star-fill"></iconify-icon>
+                            <span>4,5</span> •
+                            <span>Japonesa</span>
+                        </div>
+                        <span class="restaurant-description">
+                            Sabores japoneses autênticos em cada mordida.
+                        </span>
+                    </div>
+                </section>
+                <section class="restaurant-card">
+                    <figure>
+                        <img src="./assets/images/restaurant-images/inverno-d-italia-coffee.webp" alt="" srcset="">
+                    </figure>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-title">Inverno D'italia</h3>
+                        <div class="rating-type">
+                            <iconify-icon icon="ph:star-fill"></iconify-icon>
+                            <span>4,5</span> •
+                            <span>Cafeteria</span>
+                        </div>
+                        <span class="restaurant-description">
+                            O aroma perfeito para acompanhar seus melhores momentos.
+                        </span>
+                    </div>
+                </section>
+
+            </section>
+        </section>
+
+        <section class="contact-container" id="contact">
+            <h2>Fale Conosco</h2>
+            <form>
+                <input type="text" name="name" id="" placeholder="Nome" class="input-name">
+                <input type="email" name="email" id="" placeholder="E-mail" class="input-email">
+                <textarea name="" id="" placeholder="Sua mensagem"></textarea>
+                <input type="submit" value="Enviar" class="btn-form">
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer-section">
+            <svg width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.0467 0C6.29667 0 2.07333 7.02867 2.07333 11.8551C2.07333 15.7412 5.74 17.4438 9.15667 17.4438L9.14667 17.4336C16.22 17.4336 21.12 10.9047 21.12 5.57855C21.12 1.69914 17.495 0 14.0467 0ZM32.9267 0C25.1767 0 20.9533 7.02867 20.9533 11.8551C20.9533 15.7412 24.62 17.4438 28.0367 17.4438L28.0267 17.4336C35.1017 17.4319 40 10.9047 40 5.57855C40 1.69914 36.3667 0 32.9267 0ZM23.62 21.7687L27.6783 24.8756C24.0617 28.3823 17.4717 30.8472 12.09 30.2458C9.59597 29.9586 7.2142 29.0337 5.16704 27.5576C3.11989 26.0814 1.4741 24.102 0.383333 21.8043H0C0.672852 25.3425 2.48308 28.5533 5.14628 30.9321C7.80947 33.311 11.1747 34.7232 14.7133 34.9468C21.07 35.3534 26.9183 33.4137 31.2917 29.6444L31.285 29.6563L33.085 34.7181L35.6767 21.8043L23.62 21.7687Z"
+                    fill="#F22233" />
+            </svg>
+
+            <section class="info">
+                <p class="tel">
+                    <iconify-icon icon="bi:telephone-fill"></iconify-icon>
+                    (99) 9999-9999
+                </p>
+                <p>
+                    <iconify-icon icon="ic:round-email"></iconify-icon>
+                    ifoodemail@email.com
+                </p>
+            </section>
+
+            <section class="social">
+                <iconify-icon icon="uil:facebook"></iconify-icon>
+                <iconify-icon icon="uil:instagram-alt"></iconify-icon>
+                <iconify-icon icon="uil:linkedin"></iconify-icon>
+            </section>
+        </section>
+        <p class="copyright">&copy Copyright 2023 - iFood - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+
+
+</html>

@@ -1,0 +1,219 @@
+.contact-container {
+    min-height: 65vh;
+    padding: 2rem 1.5rem;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+form {
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+
+form .input-name,
+form .input-email {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 2.5rem;
+    border-radius: .5rem;
+    outline: none;
+    border: .005rem solid var(--dark-gray);
+    font-size: 1.6rem;
+    padding: 1.5rem 1rem;
+}
+
+textarea {
+    width: 100%;
+    height: 15rem;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+    outline: none;
+    resize: none;
+}
+
+.btn-form {
+    margin-top: 2.5rem;
+    align-self: flex-start;
+    width: 8rem;
+    height: 3rem;
+    text-align: center;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.7rem
+}
+
+.footer {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    color: var(--silver);
+}
+
+.footer .footer-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer .footer-section .info p {
+    font-size: 1.3rem;
+}
+
+.footer .footer-section .info p :first-child {
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: var(--silver);
+}
+
+.footer .footer-section .social {
+    display: grid;
+    font-size: 2.5rem;
+    color: var(--silver);
+}
+
+.footer p {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.footer .copyright {
+    text-align: center;
+}
+
+/* Responsividade */
+
+/* tablet */
+@media screen and (min-width: 768px) {  
+    form .input-name,
+    form .input-email {
+        width: 100%;
+        height: 3.5rem;
+        font-size: 1.8rem;
+    }
+    
+    textarea {
+        font-size: 1.8rem;
+    }
+    
+    .btn-form { 
+        width: 10rem;
+        height: 4rem;
+        font-size: 2rem
+    }
+
+    .footer svg {
+        width: 7rem;
+        height: 4rem;
+    }
+
+    .footer .footer-section .info {
+        order: 2;
+        margin-top: 2rem;
+    }
+
+    .footer .footer-section .info p {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .footer .footer-section .info p :first-child {
+        margin-right: 1rem;
+        font-size: 2.5rem;
+    }
+    
+    .footer .footer-section .social {
+        display: flex;
+        margin-right: 1rem;
+        font-size: 3rem;
+        padding-left: 15rem;
+    }
+
+    .footer .footer-section .social iconify-icon {
+        margin-right: 1rem;
+    }
+    
+    .footer p {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) {  
+
+    .contact-container {
+        padding-inline: 10rem;
+        padding-top: 5rem;
+        height: 70vh;
+    }
+    
+    form {
+        margin-top: 3rem;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    form .input-name,
+    form .input-email {
+        width: 49%;
+        height: 5rem;
+        font-size: 2rem;
+    }
+    
+    textarea {
+        font-size: 2rem;
+    }
+    
+    .btn-form { 
+        width: 15rem;
+        height: 5rem;
+        font-size: 2.5rem;
+        cursor: pointer;
+    }
+
+    .footer {
+        padding-inline: 5rem;
+    }
+
+    .footer svg {
+        width: 9rem;
+        height: 6rem;
+    }
+    
+    .footer .footer-section .info p {
+        font-size: 2rem;
+    }
+    
+    .footer .footer-section .info p :first-child {
+        font-size: 3rem;
+    }
+    
+    .footer .footer-section .social {
+        font-size: 4rem;
+        padding-left: 17rem;
+    }
+    
+    .footer p {
+        font-size: 1.7rem;
+    }
+    
+}
