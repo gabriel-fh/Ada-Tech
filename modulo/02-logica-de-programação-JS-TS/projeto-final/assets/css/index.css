@@ -303,6 +303,11 @@
   font-size: 1.1rem;
 }
 
+.not-found-message {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 button {
   cursor: pointer;
 }
@@ -427,8 +432,13 @@ button {
   }
 
   .task-footer .date-time {
-    width: 12rem;
+    width: 15rem;
     font-size: 1.1rem;
+  }
+
+  .not-found-message  {
+    grid-area: 1/1/1/3;
+    font-size: 1.7rem;
   }
 }
 
@@ -467,7 +477,7 @@ button {
   }
 
   .task-footer .date-time {
-    width: 12rem;
+    width: 15rem;
     font-size: 1.2rem;
   }
 
@@ -512,13 +522,18 @@ button {
   }
 
   .task-footer .date-time {
-    width: 12rem;
+    width: 15rem;
     font-size: 1.2rem;
   }
 
   .footer-task-btn {
     padding: 0.5rem 1rem;
     font-size: 1.4rem;
+  }
+
+  .not-found-message  {
+    grid-area: 1/1/1/4;
+    font-size: 2rem;
   }
 }
 
