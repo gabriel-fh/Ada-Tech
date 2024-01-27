@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Cadastro de usuários</span>
+        <a href="./usuarios.html">Usuários</a>
+      </div>
+    </nav>
+
+    <div class="container d-flex justify-content-center">
+      <div class="w-50 my-5">
+        <h3 class="mb-3">Usuário</h3>
+        <form>
+          <div class="row">
+            <div class="col-5 mb-3">
+              <label for="name" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="name" name="name" />
+              <div class="error d-none" id="error-name">
+                O campo nome é obrigatório.
+              </div>
+            </div>
+            <div class="col-7 mb-3">
+              <label for="surname" class="form-label">Sobrenome</label>
+              <input
+                type="text"
+                class="form-control"
+                id="surname"
+                name="surname"
+              />
+              <div class="error d-none" id="error-surname">
+                O campo sobrenome é obrigatório.
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 mb-3">
+              <label for="birthDate" class="form-label"
+                >Data de Nascimento</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                id="birthDate"
+                name="birthDate"
+              />
+              <div class="error d-none" id="error-birthdate">
+                O campo data de nascimento é obrigatório.
+              </div>
+            </div>
+            <div class="col-4 mb-3">
+              <label for="profession" class="form-label">Profissão</label>
+              <input
+                type="text"
+                class="form-control"
+                id="profession"
+                name="profession"
+              />
+              <div class="error d-none" id="error-profession">
+                O campo profissão é obrigatório.
+              </div>
+            </div>
+            <div class="col-4 mb-3">
+              <label for="documentNumber" class="form-label">CPF</label>
+              <input
+                type="text"
+                class="form-control"
+                id="documentNumber"
+                name="documentNumber"
+              />
+              <div class="error d-none" id="error-document">
+                O campo CPF é obrigatório.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-7 mb-3">
+              <label for="name" class="form-label">E-mail</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+              />
+              <div class="error d-none" id="error-email">
+                O campo e-mail é obrigatório.
+              </div>
+            </div>
+            <div class="col-5 mb-3">
+              <label for="password" class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+              />
+              <div class="error d-none" id="error-password">
+                O campo senha é obrigatório.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 mb-3">
+              <label for="phone" class="form-label">Telefone</label>
+              <input type="text" class="form-control" id="phone" name="phone" />
+              <div class="error d-none">O campo telefone é obrigatório.</div>
+            </div>
+            <div class="col-8 mb-3">
+              <label for="address" class="form-label">Endereço</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                name="address"
+              />
+              <div class="error d-none" id="error-address">
+                O campo endereço é obrigatório.
+              </div>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="submit">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./service.js"></script>
+    <script src="./cadastro.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

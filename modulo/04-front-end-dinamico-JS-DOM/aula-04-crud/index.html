@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Usuários</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="user_form">
+        <h1>Usuário</h1>
+        <form>
+          <section class="user_data_container">
+            <div class="flex">
+              <label for="user_first_name">Nome</label>
+              <input type="text" name="name" id="user_first_name" />
+              <span class="error_message hidden"
+                >O campo nome é obrigatório</span
+              >
+            </div>
+            <div class="flex bigger">
+              <label for="user_last_name">Sobrenome</label>
+              <input
+                type="text"
+                name="surname"
+                id="user_last_name"
+                class="bigger"
+              />
+              <span class="error_message hidden"
+                >O campo sobrenome é obrigatório</span
+              >
+            </div>
+          </section>
+          <section class="user_data_container">
+            <div class="flex">
+              <label for="user_birth_date">Data de Nascimento</label>
+              <input type="date" name="birthDate" id="user_birth_date" />
+              <span class="error_message hidden"
+                >O campo data de nascimento é obrigatório</span
+              >
+            </div>
+            <div class="flex">
+              <label for="user_profession">Profissão</label>
+              <input type="text" name="profession" id="user_profession" />
+              <span class="error_message hidden"
+                >O campo profissão é obrigatório</span
+              >
+            </div>
+            <div class="flex">
+              <label for="user_document_number">CPF</label>
+              <input
+                type="text"
+                name="documentNumber"
+                id="user_document_number"
+              />
+              <span class="error_message hidden"
+                >O campo CPF é obrigatório</span
+              >
+            </div>
+          </section>
+          <section class="user_data_container">
+            <div class="flex bigger">
+              <label for="user_email">E-mail</label>
+              <input type="email" name="email" id="user_email" class="bigger" />
+              <span class="error_message hidden"
+                >O campo e-mail é obrigatório</span
+              >
+            </div>
+            <div class="flex">
+              <label for="user_password">Senha</label>
+              <input type="password" name="password" id="user_password" />
+              <span class="error_message hidden"
+                >O campo senha é obrigatório</span
+              >
+            </div>
+          </section>
+          <section class="user_data_container">
+            <div class="flex">
+              <label for="user_phone">Telefone</label>
+              <input type="tel" name="phone" id="user_phone" />
+              <span class="error_message hidden"
+                >O campo telefone é obrigatório</span
+              >
+            </div>
+            <div class="flex bigger">
+              <label for="user_address">Endereço</label>
+              <input
+                type="text"
+                name="address"
+                id="user_address"
+                class="bigger"
+              />
+              <span class="error_message hidden"
+                >O campo endereço é obrigatório</span
+              >
+            </div>
+          </section>
+          <input type="submit" value="Salvar" class="submit_btn" />
+        </form>
+      </section>
+    </main>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

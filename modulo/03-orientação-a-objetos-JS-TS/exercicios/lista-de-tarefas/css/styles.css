@@ -1,0 +1,36 @@
+* {
+  font-family: "Helvetica", sans-serif;
+}
+
+main {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+em {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+.campo-formulario {
+  margin: 1rem 0;
+}
+
+.campo-formulario label {
+  display: flex;
+  flex-direction: column;
+}
+
+#concluidas li em {
+  text-decoration: line-through;
+}
+
+#concluidas li span {
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  color: gray;
+}

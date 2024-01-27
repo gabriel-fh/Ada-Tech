@@ -1,0 +1,30 @@
+<!-- 
+  Crie uma página com um elemento <div> para exibir a hora atual em um formato de relógio digital. Atualize o conteúdo a cada segundo.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 02</title>
+  </head>
+  <body>
+    <h1 id="clock"></h1>
+    <script>
+      const updateClock = () => {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+
+        const clock = document.getElementById("clock");
+        clock.innerHTML = `${hours}:${minutes}:${seconds}`;
+
+        setTimeout(updateClock, 1000);
+      };
+
+      updateClock();
+    </script>
+  </body>
+</html>

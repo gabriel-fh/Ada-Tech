@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Lista de tarefas</title>
+</head>
+<body>
+  <main>
+    <h1>Lista de tarefas</h1>
+    <section id="formulario">
+      <div class="campo-formulario">
+        <label>
+          Titulo
+          <input type="text" name="titulo">
+        </label>
+      </div>
+      <div class="campo-formulario">
+        <label>
+          Descrição
+          <input type="text" name="descricao">
+        </label>
+      </div>
+      <div class="acoes">
+        <button onclick="adicionarTarefa()">Adicionar tarefa</button>
+      </div>
+    </section>
+
+    <section id="pendentes">
+      <h2>Pendentes</h2>
+      <ul>
+      </ul>
+    </section>
+
+    <section id="concluidas">
+      <h2>Concluidas</h2>
+      <ul>
+      </ul>
+    </section>
+    
+  </main>
+  <script src="./js/classes.js"></script>
+  <script src="./js/scripts.js"></script>
+</body>
+</html>

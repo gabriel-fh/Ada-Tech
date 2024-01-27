@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <style>
+        p {
+            font-weight: bold;
+        }
+    </style> -->
+  </head>
+  <body>
+    <!-- getElementById -->
+    <p id="greeting">Olá, mundo!</p>
+
+    <!-- getElementsByClassName -->
+    <ul>
+      <li class="item">Item 1</li>
+      <li class="item">Item 2</li>
+      <li class="item">Item 3</li>
+    </ul>
+
+    <!-- getElementsByName -->
+    <input type="text" name="user" value="Ivirson" />
+    <input type="text" name="user" value="Daltro" />
+
+    <!-- getElementsByTagName -->
+    <p>Parágrafo 1</p>
+    <p>Parégrafo 2</p>
+
+    <!-- querySelector -->
+    <div class="container">
+      <p class="highlight">Este é um parágrafo destacado</p>
+      <p class="highlight">Este é outro parágrafo</p>
+    </div>
+
+    <script>
+      // Exercício 1: Obtendo um elemento por ID e alterando seu conteúdo
+      const p = document.getElementById("greeting");
+      console.log(p);
+      //   p.innerText = "Olá, turma!";
+      p.innerHTML = "Olá, <strong>turma!</strong>";
+
+      // Exercício 2: Obtendo elementos por classe e alterando seu estilo
+      const items = document.getElementsByClassName("item");
+      setTimeout(() => {
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.color = "blue";
+          items[i].style.listStyleType = "none";
+        }
+      }, 1000);
+
+      // Exercício 3: Obtendo elementos por nome e exibindo seu valor
+      const input = document.getElementsByName("user")[0];
+      console.log(input);
+      console.log("Conteúdo do input:", input.value);
+
+      // Exercício 4: Obtendo elementos por tag e alterando seu conteúdo
+      const elements = document.getElementsByTagName("p");
+      console.log(elements);
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].innerText = "Novo texto para o parágrafo" + i;
+      }
+
+      // Exercício 5: Selecionando um elemento com querySelector e alterando seu estilo
+      const highlight = document.querySelector(".highlight");
+      highlight.style.fontWeight = "bold";
+
+      const highlightElements = document.querySelectorAll(".highlight");
+      //   for (let i = 0; i < highlightElements.length; i++) {
+      //     highlightElements[i].style.fontWeight = "bold";
+      //   }
+
+      for (const element of highlightElements) {
+        element.style.fontWeight = "bold";
+      }
+    </script>
+  </body>
+</html>

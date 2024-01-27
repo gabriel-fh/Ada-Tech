@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Lista de tarefas</h1>
+      <div class="todo-list">
+        <label>Título</label>
+        <input type="text" id="title-input" placeholder="Título" />
+        <label>Descrição</label>
+        <textarea
+          id="description-input"
+          rows="4"
+          cols="50"
+          placeholder="Descrição"
+        ></textarea>
+        <button class="create-task">Adicionar Tarefa</button>
+      </div>
+
+      <!-- quando checked muda id da classe via JS -->
+      <section class="task-container">
+        <div class="task-list">
+          <h2>Tarefas Pendentes</h2>
+          <ul id="pending-list">
+            <!-- <li>
+              <div class="checkbox"></div>
+              <div class="list-content">
+                <span class="title">Titulo</span>
+                <span class="description">dsfasd sadfa asfasdf asdfasdf adsfa sdfasdf adfadsfafa asdfasdf asdfsd sdf f dsdsadfasdfsdaf adaksdkj</span>
+                <div class="details">
+                  <div class="buttons">
+                    <button class="edit-btn">Editar</button>
+                    <button class="delete-btn">Excluir</button>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+        <div class="task-list">
+          <h2>Tarefas Concluídas</h2>
+          <ul id="done-list">
+            <!-- <li>
+              <div class="checkbox"></div>
+              <div class="list-content">
+                <span class="title">Titulo</span>
+                <span class="description">dsfasd sadfa asfasdf asdfasdf adsfa sdfasdf adfadsfafa asdfasdf asdfsd sdf f dsdsadfasdfsdaf adaksdkj</span>
+                <div class="details">
+                  <span class="dateTime">Concluída em:</br> Seg, 12/05/2026, 15:40</span>
+                  <div class="buttons">
+                    <button class="edit-btn">Editar</button>
+                    <button class="delete-btn">Excluir</button>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js" async defer></script>
+    <script src="js/index.js" async defer></script>
+
+  </body>
+</html>

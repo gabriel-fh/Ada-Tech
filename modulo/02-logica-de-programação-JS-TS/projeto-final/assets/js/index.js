@@ -71,8 +71,6 @@ const createTask = function () {
 
         taskArr.push(task);
 
-        console.log(task.description)
-
         addTask();
     }
 };

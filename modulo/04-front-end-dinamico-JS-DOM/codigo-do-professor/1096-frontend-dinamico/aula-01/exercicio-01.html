@@ -1,0 +1,27 @@
+<!-- 
+    Crie um formulário com um campo de input. Use JavaScript para validar se o campo está preenchido quando o formulário for enviado. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="validateForm()">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" />
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <script>
+      const validateForm = () => {
+        const name = document.getElementById("name").value;
+        if (!name || !name.trim()) {
+          alert("Por favor, preencha o campo nome.");
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- keydown -->
+    <div>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" />
+    </div>
+
+    <!-- keyup -->
+    <div>
+      <label for="age">Idade:</label>
+      <input type="number" id="age" />
+    </div>
+
+    <br />
+
+    <!-- change -->
+    <div id="output">
+      <p>Envie o formulário para ver o resultado.</p>
+    </div>
+    <form>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message"></textarea>
+
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <!-- mouseover -->
+    <div id="output2">
+      <p>Passe o mouse sobre este texto para ver o resultado.</p>
+    </div>
+
+    <!-- mouseout -->
+    <div id="output3">
+      <p>
+        Passe o mouse sobre este texto e mova-o para fora para ver o resultado.
+      </p>
+    </div>
+
+    <!-- focus -->
+    <label for="inputFocus">Clique dentro desse campo:</label>
+    <input type="text" id="inputFocus" />
+
+    <!-- blur -->
+    <label for="inputBlur"
+      >Clique dentro desse campo e depois clique fora:</label
+    >
+    <input type="text" id="inputBlur" />
+
+    <script>
+      // keydown
+      document.getElementById("name").addEventListener("keydown", (event) => {
+        console.log(event.key);
+      });
+
+      // keyup
+      document.getElementById("age").addEventListener("keyup", (event) => {
+        console.log(event.key);
+      });
+
+      //   change
+      document
+        .getElementById("email")
+        .addEventListener("change", updateContent);
+
+      document
+        .getElementById("message")
+        .addEventListener("change", updateContent);
+
+      function updateContent() {
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        const result = `E-mail: ${email}, Mensagem: ${message}`;
+        document.getElementById("output").innerText = result;
+      }
+
+      //   mouseover
+      document
+        .getElementById("output2")
+        .addEventListener("mouseover", updateContent);
+
+      //   mouseout
+      document
+        .getElementById("output3")
+        .addEventListener("mouseout", updateContent);
+
+      // load
+      window.addEventListener("load", () => {
+        alert("carregamento da página finalizado");
+      });
+
+      // focus
+      document
+        .getElementById("inputFocus")
+        .addEventListener("focus", function (event) {
+          event.target.value = "Mudei";
+        });
+
+      // blur
+      document
+        .getElementById("inputBlur")
+        .addEventListener("blur", function () {
+          event.target.value = "Funcionou";
+        });
+    </script>
+  </body>
+</html>

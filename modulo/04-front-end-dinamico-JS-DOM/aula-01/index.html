@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relógio digital</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #fff;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(148, 135, 160);
+      }
+      .watch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10rem;
+      }
+    </style>
+
+    <main class="container">
+      <div class="watch">
+        <span class="time">00:00:00</span>
+      </div>
+    </main>
+    <script>
+      const time = document.querySelector(".time");
+
+      function atualizarHora() {
+        const now = new Date();
+        const options = {
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
+          hour12: false,
+        };
+        const intlFormat = new Intl.DateTimeFormat("pt-BR", options);
+        const formatedTime = intlFormat.format(now);
+
+        time.innerText = formatedTime;
+      }
+
+      setInterval(atualizarHora, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body {
+  background-color: #fff;
+}
+main {
+  display: grid;
+  place-items: center;
+}
+h1 {
+  text-align: center;
+}
+.todo-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  width: 35%;
+  gap: 0.7rem;
+}
+.todo-list > * {
+  align-self: flex-start;
+}
+.todo-list label {
+  margin-top: 0.7rem;
+  padding: 0;
+  margin-left: 0;
+  font-size: 1.2rem;
+}
+.todo-list input[type="text"] {
+  width: 100%;
+}
+.todo-list textarea {
+  resize: none;
+  width: 100%;
+}
+.todo-list input[type="text"], .todo-list textarea {
+  outline: none;
+  font-size: 1rem;
+}
+.create-task {
+  align-self: flex-end;
+  cursor: pointer;
+}
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+h2 {
+  text-align: center;
+}
+
+.task-list {
+  width: 35%;
+}
+ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+ul li {
+  list-style: none;
+  display: flex;
+  gap: .9rem;
+  background-color: #f1f1f1;
+  border-radius: .5rem;
+  padding: .7rem;
+  width: 100%;
+}
+ul li .list-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.list-content > * {
+  margin: 0;
+  padding: 0;
+}
+.list-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.checkbox {
+  width: 1.7rem;
+  height: 1.7rem;
+  border: .01rem solid #000;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.checkbox.checked {
+  background-color: red;
+}
+.title {
+  font-size: 1.3rem;
+}
+.description {
+  font-size: 1rem;
+  width: 95%;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.dateTime {
+  font-size: 0.65rem;
+  color: #999;
+  padding-inline: 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  align-self: flex-end;
+}
+
+.buttons > * {
+  cursor: pointer;
+  padding: .3rem 1rem;
+  align-self: flex-end; 
+}

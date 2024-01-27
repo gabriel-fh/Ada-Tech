@@ -1,0 +1,51 @@
+* {
+  font-family: "Helvetica", sans-serif;
+}
+
+body {
+  background-color: gray;
+}
+
+main {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.produtos h2 {
+  color: silver;
+  margin-top: 2rem;
+}
+
+.produtos article {
+  margin-top: 1rem;
+}
+
+.produtos article > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.produtos article > div em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.separador {
+  border-bottom: 2px dotted;
+  flex: 1;
+  margin: 0 0.5rem;
+}
+
+.produtos article span {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+// Coruja lobotomizada - Lobotomized Owl: * + *
+.produtos article + article::before {
+  content: "* * *";
+  color: darkgray;
+  display: block;
+  margin: 1rem 0;
+}
