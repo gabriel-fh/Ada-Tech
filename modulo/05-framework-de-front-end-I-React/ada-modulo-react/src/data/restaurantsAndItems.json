@@ -1,0 +1,266 @@
+[
+  {
+    "nome": "Chez Pierre",
+    "descricao": "Uma pitoresca brasserie francesa com pratos clássicos e ambiente acolhedor.",
+    "avaliacao": 4.5,
+    "categoria": "Francesa",
+    "tempo_de_entrega": 40,
+    "cardapio": [
+      {
+        "nome": "Coeur de Boeuf",
+        "descricao": "Filé mignon grelhado com molho de vinho tinto",
+        "preco": 25
+      },
+      {
+        "nome": "Canard à l'Orange",
+        "descricao": "Pato assado com molho de laranja e ervas",
+        "preco": 30
+      },
+      {
+        "nome": "Tarte Tatin",
+        "descricao": "Torta de maçã caramelizada com massa folhada",
+        "preco": 12
+      }
+    ]
+  },
+  {
+    "nome": "Sakura Sushi House",
+    "descricao": "Um santuário gastronômico japonês oferecendo os melhores sabores do Oriente.",
+    "avaliacao": 4.2,
+    "categoria": "Japonesa",
+    "tempo_de_entrega": 35,
+    "cardapio": [
+      {
+        "nome": "Sashimi Moriawase",
+        "descricao": "Seleção de sashimi fresco",
+        "preco": 20
+      },
+      {
+        "nome": "Tempura Misto",
+        "descricao": "Frutos do mar e legumes empanados e fritos",
+        "preco": 18
+      },
+      {
+        "nome": "Dragon Roll",
+        "descricao": "Rolinho de sushi com camarão empanado e abacate",
+        "preco": 16
+      }
+    ]
+  },
+  {
+    "nome": "El Rancho Tex-Mex",
+    "descricao": "Autêntica cozinha mexicana com uma pitada de sabor do Velho Oeste.",
+    "avaliacao": 4.1,
+    "categoria": "Mexicana",
+    "tempo_de_entrega": 45,
+    "cardapio": [
+      {
+        "nome": "Tacos Al Pastor",
+        "descricao": "Tacos de carne de porco marinada com abacaxi e coentro",
+        "preco": 10
+      },
+      {
+        "nome": "Burrito Grande",
+        "descricao": "Burrito grande com carne, feijão, arroz e guacamole",
+        "preco": 12
+      },
+      {
+        "nome": "Enchiladas Verdes",
+        "descricao": "Enchiladas de frango com molho verde picante",
+        "preco": 11
+      }
+    ]
+  },
+  {
+    "nome": "Nonna's Trattoria",
+    "descricao": "Um refúgio italiano onde a família se reúne para saborear pratos caseiros.",
+    "avaliacao": 4.3,
+    "categoria": "Italiana",
+    "tempo_de_entrega": 40,
+    "cardapio": [
+      {
+        "nome": "Spaghetti Carbonara",
+        "descricao": "Massa italiana com molho de queijo, bacon e ovo",
+        "preco": 15
+      },
+      {
+        "nome": "Penne alla Vodka",
+        "descricao": "Penne com molho de tomate e vodka cremoso",
+        "preco": 14
+      },
+      {
+        "nome": "Tiramisu",
+        "descricao": "Sobremesa clássica italiana de café e mascarpone",
+        "preco": 8
+      }
+    ]
+  },
+  {
+    "nome": "Big Bob's BBQ",
+    "descricao": "O verdadeiro sabor do sul americano com carnes defumadas e molhos irresistíveis.",
+    "avaliacao": 4.6,
+    "categoria": "Americana",
+    "tempo_de_entrega": 50,
+    "cardapio": [
+      {
+        "nome": "Brisket Defumado",
+        "descricao": "Brisket defumado lentamente por 12 horas",
+        "preco": 22
+      },
+      {
+        "nome": "Costela de Porco",
+        "descricao": "Costela de porco grelhada com molho barbecue",
+        "preco": 18
+      },
+      {
+        "nome": "Batata Frita com Queijo",
+        "descricao": "Batatas fritas cobertas com queijo cheddar e bacon",
+        "preco": 10
+      }
+    ]
+  },
+  {
+    "nome": "Pancho's Cantina",
+    "descricao": "Um festival de sabores mexicanos autênticos em cada prato preparado com paixão.",
+    "avaliacao": 4.0,
+    "categoria": "Mexicana",
+    "tempo_de_entrega": 35,
+    "cardapio": [
+      {
+        "nome": "Chili Con Carne",
+        "descricao": "Prato picante de carne e feijão",
+        "preco": 13
+      },
+      {
+        "nome": "Fajitas de Frango",
+        "descricao": "Fajitas de frango grelhado com pimentões e cebolas",
+        "preco": 15
+      },
+      {
+        "nome": "Quesadilla de Camarão",
+        "descricao": "Quesadilla de camarão com queijo e guacamole",
+        "preco": 14
+      }
+    ]
+  },
+  {
+    "nome": "Mama Rosa's Pizzeria",
+    "descricao": "O sabor autêntico da Itália em cada fatia de pizza artesanalmente preparada.",
+    "avaliacao": 4.4,
+    "categoria": "Italiana",
+    "tempo_de_entrega": 30,
+    "cardapio": [
+      {
+        "nome": "Margherita",
+        "descricao": "Pizza clássica com molho de tomate, mussarela e manjericão",
+        "preco": 12
+      },
+      {
+        "nome": "Pepperoni",
+        "descricao": "Pizza com pepperoni picante e queijo",
+        "preco": 14
+      },
+      {
+        "nome": "Calzone",
+        "descricao": "Calzone recheado com presunto, queijo e cogumelos",
+        "preco": 16
+      }
+    ]
+  },
+  {
+    "nome": "Dragon Palace",
+    "descricao": "Uma jornada culinária pela China com pratos autênticos e sabores surpreendentes.",
+    "avaliacao": 4.2,
+    "categoria": "Chinesa",
+    "tempo_de_entrega": 40,
+    "cardapio": [
+      {
+        "nome": "Frango Xadrez",
+        "descricao": "Frango com pimentão, cebola e molho de soja",
+        "preco": 12
+      },
+      {
+        "nome": "Rolinho Primavera",
+        "descricao": "Rolinhos primavera crocantes com legumes e molho agridoce",
+        "preco": 8
+      },
+      {
+        "nome": "Arroz Chop Suey",
+        "descricao": "Arroz frito com legumes e carne de porco em molho agridoce",
+        "preco": 10
+      }
+    ]
+  },
+  {
+    "nome": "The Burger Joint",
+    "descricao": "O paraíso dos hambúrgueres artesanais com combinações ousadas e sabores irresistíveis.",
+    "avaliacao": 4.3,
+    "categoria": "Hamburgueria",
+    "tempo_de_entrega": 35,
+    "cardapio": [
+      {
+        "nome": "Classic Burger",
+        "descricao": "Hambúrguer clássico com alface, tomate e queijo",
+        "preco": 10
+      },
+      {
+        "nome": "BBQ Bacon Burger",
+        "descricao": "Hambúrguer com bacon crocante e molho barbecue",
+        "preco": 12
+      },
+      {
+        "nome": "Vegetarian Burger",
+        "descricao": "Hambúrguer vegetariano com cogumelos e queijo de cabra",
+        "preco": 11
+      }
+    ]
+  },
+  {
+    "nome": "Café Parisien",
+    "descricao": "Um refúgio acolhedor para os amantes de café com delícias francesas e aromas irresistíveis.",
+    "avaliacao": 4.6,
+    "categoria": "Cafeteria",
+    "tempo_de_entrega": 25,
+    "cardapio": [
+      {
+        "nome": "Croissant de Chocolate",
+        "descricao": "Croissant folhado recheado com chocolate derretido",
+        "preco": 5
+      },
+      {
+        "nome": "Cappuccino",
+        "descricao": "Café espresso com leite vaporizado e espuma de leite",
+        "preco": 4
+      },
+      {
+        "nome": "Torta de Frutas Frescas",
+        "descricao": "Torta de frutas frescas da estação com creme de confeiteiro",
+        "preco": 6
+      }
+    ]
+  },
+  {
+    "nome": "Taj Mahal",
+    "descricao": "Uma viagem gastronômica à Índia com especiarias exóticas e pratos deliciosamente aromáticos.",
+    "avaliacao": 4.1,
+    "categoria": "Indiana",
+    "tempo_de_entrega": 50,
+    "cardapio": [
+      {
+        "nome": "Butter Chicken",
+        "descricao": "Frango cozido em molho de tomate, creme e manteiga",
+        "preco": 16
+      },
+      {
+        "nome": "Chicken Biryani",
+        "descricao": "Arroz basmati com frango, especiarias e ervas",
+        "preco": 14
+      },
+      {
+        "nome": "Saag Paneer",
+        "descricao": "Espinafre refogado com queijo paneer",
+        "preco": 12
+      }
+    ]
+  }
+]
