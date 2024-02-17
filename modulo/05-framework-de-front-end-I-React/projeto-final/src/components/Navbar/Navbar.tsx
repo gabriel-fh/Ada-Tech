@@ -1,17 +1,25 @@
-import { Link } from "react-router-dom";
+import { StyleSheetManager } from "styled-components";
+import {
+  Nav,
+  NavgationListItem,
+  NavgationList,
+  StyledLink,
+} from "./Navbar.style";
 
-function Navbar() {
+function Navbar({ isOpen }: { isOpen: boolean }) {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to={"/"}>Home</Link>
-        </li>
-        <li>
-          <Link to={"/recipe"}>Receita</Link>
-        </li>
-      </ul>
-    </nav>
+    <StyleSheetManager shouldForwardProp={(prop) => prop !== "is_open"}>
+      <Nav isopen={isOpen.toString()}>
+        <NavgationList>
+          <NavgationListItem>
+            <StyledLink to={"/"}>Home</StyledLink>
+          </NavgationListItem>
+          <NavgationListItem>
+            <StyledLink to={"/recipe"}>Receita</StyledLink>
+          </NavgationListItem>
+        </NavgationList>
+      </Nav>
+    </StyleSheetManager>
   );
 }
 
