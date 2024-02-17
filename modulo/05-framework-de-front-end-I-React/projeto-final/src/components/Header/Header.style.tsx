@@ -31,7 +31,7 @@ export const LogoImage = styled.img`
 export const LogoTitle = styled.span`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 1.7rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.5s;
 
   &.changeColor {

@@ -6,7 +6,12 @@ const GLobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Roboto', sans-serif
+        font-family: "Montserrat", sans-serif;
+    }
+
+    html, body {
+        overflow: hidden;
+        background-color: #fefbfbfe
     }
 
     :root {
@@ -14,7 +19,7 @@ const GLobalStyle = createGlobalStyle`
     }
 
     main {
-        padding: 6rem 1rem;
+        padding: 4.9rem 0;
     }
     
 `;
