@@ -5,15 +5,16 @@ interface NavProps {
   isopen: string;
 }
 
-export const Nav = styled.div<NavProps>`
+export const Nav = styled.nav<NavProps>`
   position: fixed;
-  top: 7.2vh;
+  top: 7.19vh;
   right: ${(props) => (props.isopen == 'true' ? '0' : '-100%')};
-  width: 65%;
+  width: 61%;
   height: 100vh;
-  background-color: #000;
+  background-color: ${({theme}) => theme.colors.primary};
   transition: all 0.5s;
   z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 50px 15px 0px;
 
   &.closeNavigation {
     position: absolute;
@@ -25,7 +26,7 @@ export const NavgationList = styled.ul`
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.7rem;
 `;
 
 export const NavgationListItem = styled.li`
@@ -35,4 +36,7 @@ export const NavgationListItem = styled.li`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 2rem;
+  font-weight: 500;
+  color: ${({theme}) => theme.colors.white};
+
 `;

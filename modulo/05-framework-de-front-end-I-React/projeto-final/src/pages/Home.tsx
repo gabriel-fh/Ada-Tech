@@ -1,6 +1,11 @@
 const Home = () => {
   return (
-    <div>Home</div>
+    <main>
+      
+      <p>Home</p>
+      
+    </main>
+    // "Recipédia: O portal de sabores que transforma receitas em experiências memoráveis."
   )
 }
 

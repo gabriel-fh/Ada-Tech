@@ -17,6 +17,9 @@ function Navbar({ isOpen }: { isOpen: boolean }) {
           <NavgationListItem>
             <StyledLink to={"/recipe"}>Receita</StyledLink>
           </NavgationListItem>
+          <NavgationListItem>
+            <StyledLink to={"/search"}>Pesquisar</StyledLink>
+          </NavgationListItem>
         </NavgationList>
       </Nav>
     </StyleSheetManager>

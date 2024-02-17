@@ -12,6 +12,11 @@ const GLobalStyle = createGlobalStyle`
     :root {
         font-size: 62.5%;
     }
+
+    main {
+        padding: 6rem 1rem;
+    }
+    
 `;
 
 export default GLobalStyle;

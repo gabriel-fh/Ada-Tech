@@ -1,6 +1,6 @@
 const Recipe = () => {
   return (
-    <div>Recipe</div>
+    <main>Recipe</main>
   )
 }
 
