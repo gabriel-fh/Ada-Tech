@@ -38,5 +38,4 @@ export const StyledLink = styled(Link)`
   font-size: 2rem;
   font-weight: 500;
   color: ${({theme}) => theme.colors.white};
-
 `;
