@@ -10,18 +10,12 @@ const GLobalStyle = createGlobalStyle`
     }
 
     html, body {
-        overflow: hidden;
         background-color: #fefbfbfe
     }
 
     :root {
         font-size: 62.5%;
     }
-
-    main {
-        padding: 4.9rem 0;
-    }
-    
 `;
 
 export default GLobalStyle;

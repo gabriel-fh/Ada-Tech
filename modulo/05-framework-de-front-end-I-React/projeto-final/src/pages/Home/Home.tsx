@@ -1,16 +1,21 @@
+import RecipeCard from "../../components/RecipeCard";
+import { CardSlider, HighlightedText, Main, Section, SubTitle } from "../style/PagesStyle";
 import {
-  HighlightedText,
   ImageContent,
   MainImage,
-  Section,
-  SubTitle,
   TextContent,
   Title,
 } from "./Home.style";
 
+import recipesData from  '../../data/recipesData.json'
+
 const Home = () => {
+
+  const data: Recipes[] = recipesData.recipes;
+  console.log(data)
+
   return (
-    <main>
+    <Main>
       <Section className="text-image">
         <TextContent>
           <Title>
@@ -26,9 +31,13 @@ const Home = () => {
       </Section>
       <Section>
         <SubTitle>Receitas <HighlightedText>populares</HighlightedText></SubTitle>
-        
+        <CardSlider>
+          {data.map(item => (
+            <RecipeCard title={item.title} prepTime={item.prepTime} servings={item.servings} />
+          ))}
+        </CardSlider>
       </Section>
-    </main>
+    </Main>
   );
 };
 
