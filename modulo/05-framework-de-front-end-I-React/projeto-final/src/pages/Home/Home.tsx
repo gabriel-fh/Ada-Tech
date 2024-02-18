@@ -53,7 +53,7 @@ const Home = () => {
         "https://media.istockphoto.com/id/1268693109/pt/foto/roast-chicken.jpg?s=612x612&w=0&k=20&c=OoC84ofLPb9_TeoKf9T-dATqBCBbJJ9j3578HLgJS_M=",
     },
   ];
-  
+
   return (
     <Main>
       <Section className="text-image">
@@ -97,9 +97,7 @@ const Home = () => {
           {categoryData.map((item, index) => (
             <CategoryContent key={index}>
               <CategoryImage>
-                <StyleSheetManager
-                  shouldForwardProp={(prop) => prop !== item.image}
-                >
+                <StyleSheetManager shouldForwardProp={(prop) => prop !== item.image}>
                   <RoundedImage backgroundimage={item.image} />
                 </StyleSheetManager>
               </CategoryImage>
