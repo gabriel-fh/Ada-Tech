@@ -46,7 +46,7 @@ export const CardInfo = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 1rem;
 `;
 
 export const CardSpan = styled.span`

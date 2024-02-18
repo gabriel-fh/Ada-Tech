@@ -12,7 +12,6 @@ import recipesData from  '../../data/recipesData.json'
 const Home = () => {
 
   const data: Recipes[] = recipesData.recipes;
-  console.log(data)
 
   return (
     <Main>
@@ -33,7 +32,7 @@ const Home = () => {
         <SubTitle>Receitas <HighlightedText>populares</HighlightedText></SubTitle>
         <CardSlider>
           {data.map(item => (
-            <RecipeCard title={item.title} prepTime={item.prepTime} servings={item.servings} />
+            <RecipeCard key={item.id} title={item.title} prepTime={item.prepTime} servings={item.servings} />
           ))}
         </CardSlider>
       </Section>

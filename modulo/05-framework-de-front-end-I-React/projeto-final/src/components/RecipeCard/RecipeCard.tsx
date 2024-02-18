@@ -16,7 +16,40 @@ interface RecipeCardProps {
   servings: string;
 }
 
-function RecipeCard({ title, prepTime, servings}: RecipeCardProps ) {
+function RecipeCard({ title, prepTime, servings }: RecipeCardProps) {
+  const formatPrepTime = (prepTime: string): string => {
+    const splitedPrepTime: string[] = prepTime.split(" ");
+    let hour: number = 0;
+    let min: number = 0;
+
+    for (let i = 0; i < splitedPrepTime.length; i++) {
+      let value: number = 0;
+      !isNaN(parseInt(splitedPrepTime[i], 10)) &&
+        (value = parseInt(splitedPrepTime[i], 10));
+      const part: string = splitedPrepTime[i + 1];
+
+      if (part && part.includes("hora")) {
+        hour += value;
+      } else if (part && part.includes("min")) {
+        min += value;
+      }
+    }
+
+    let formatedPrepTime: string = "";
+
+    if (hour > 0) {
+      formatedPrepTime += `${hour} ${hour === 1 ? "h" : "hs"}`;
+    }
+
+    if (min > 0) {
+      formatedPrepTime += `${formatedPrepTime.length > 0 ? " e " : ""}${min} ${
+        min === 1 ? "min" : "mins"
+      }`;
+    }
+
+    return formatedPrepTime;
+  };
+
   return (
     <Card>
       <CardImageContent>
@@ -24,7 +57,7 @@ function RecipeCard({ title, prepTime, servings}: RecipeCardProps ) {
         <CardInfo>
           <CardSpan>
             <Icon icon="mingcute:time-fill" inline />
-            {prepTime}
+            {formatPrepTime(prepTime)}
           </CardSpan>
           <CardSpan>
             <Icon icon="streamline:serving-dome-solid" />
@@ -38,7 +71,7 @@ function RecipeCard({ title, prepTime, servings}: RecipeCardProps ) {
       </CardImageContent>
       <CardDescription>
         <CardTitle>{title}</CardTitle>
-        <Link to={'/recipe'}>Ver receita</Link>
+        <Link to={"/recipe"}>Ver receita</Link>
       </CardDescription>
     </Card>
   );
