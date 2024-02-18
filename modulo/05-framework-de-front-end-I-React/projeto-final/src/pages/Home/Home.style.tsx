@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface RoundedImageProps {
-  backgroundImage: string;
+  backgroundimage: string;
 }
 
 export const Title = styled.h1`
@@ -68,7 +68,7 @@ export const RoundedImage = styled.div<RoundedImageProps>`
   width: 7.5rem;
   height: 7.5rem;
   border-radius: 100%;
-  background-image: ${(props) => props.backgroundImage && `url(${props.backgroundImage})`};
+  background-image: ${(props) => props.backgroundimage && `url(${props.backgroundimage})`};
   background-repeat: no-repeat;
   background-position: center;
   background-size: 200%;

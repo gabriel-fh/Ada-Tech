@@ -17,7 +17,7 @@ interface RecipeCardProps {
   image: string;
 }
 
-function RecipeCard({ title, prepTime, servings, image }: RecipeCardProps) {
+const RecipeCard = ({ title, prepTime, servings, image }: RecipeCardProps) => {
   const formatPrepTime = (prepTime: string): string => {
     const splitedPrepTime: string[] = prepTime.split(" ");
     let hour: number = 0;
