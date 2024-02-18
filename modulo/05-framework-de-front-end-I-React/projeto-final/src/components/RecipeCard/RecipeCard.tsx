@@ -14,9 +14,10 @@ interface RecipeCardProps {
   title: string;
   prepTime: string;
   servings: string;
+  image: string;
 }
 
-function RecipeCard({ title, prepTime, servings }: RecipeCardProps) {
+function RecipeCard({ title, prepTime, servings, image }: RecipeCardProps) {
   const formatPrepTime = (prepTime: string): string => {
     const splitedPrepTime: string[] = prepTime.split(" ");
     let hour: number = 0;
@@ -51,7 +52,7 @@ function RecipeCard({ title, prepTime, servings }: RecipeCardProps) {
   return (
     <Card>
       <CardImageContent>
-        <CardImage src="https://media.istockphoto.com/id/104704117/pt/foto/placas-de-restaurante.jpg?s=612x612&w=0&k=20&c=M8Tsp4YRufFS-Pw_9yA8Ftg2T2dXdYQgkP1mcn-0DNo=" />
+        <CardImage src={image} alt={title} />
         <CardInfo>
           <CardSpan>
             <Icon icon="mingcute:time-fill" inline />

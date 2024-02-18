@@ -18,6 +18,7 @@ export const CardImage = styled.img`
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
   width: 20rem;
+  height: 13.2rem
 `;
 
 export const CardDescription = styled.div`

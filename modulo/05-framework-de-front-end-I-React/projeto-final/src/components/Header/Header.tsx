@@ -17,7 +17,7 @@ function Header() {
     <StyledHeader className={menuIsOpen ? 'changeColor' : ''}>
       <StyledLink to={'/'}>
         <Logo>
-          <LogoImage src={menuIsOpen ? './recipedia2.svg' : 'recipedia.svg'} />
+          <LogoImage src={menuIsOpen ? './recipedia2.svg' : 'recipedia.svg'} alt={'Recipédia Logo'} />
           <LogoTitle className={menuIsOpen ? 'changeColor' : ''} >Recipédia</LogoTitle>
         </Logo>
       </StyledLink>
