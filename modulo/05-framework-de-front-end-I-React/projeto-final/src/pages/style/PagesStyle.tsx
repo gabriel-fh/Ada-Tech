@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const Main = styled.main`
   padding: 4.9rem 0;
+  min-height: 92.3vh
 `;
 
 export const Section = styled.section`
