@@ -27,6 +27,7 @@ const Recipe = () => {
 
   const { id } = useParams();
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentRecipe, setCurrentRecipe] = useState<Recipe | undefined>(
     data.find((item) => item.id === Number(id))
   );
@@ -121,6 +122,7 @@ const Recipe = () => {
                 ))}
               </ListContent>
             </RecipeInfoList>
+            
           </>
         ) : (
           <></>

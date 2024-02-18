@@ -44,3 +44,11 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.black};
 `;
+
+export const SearchResults = styled.div `
+  padding: 4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem
+`;

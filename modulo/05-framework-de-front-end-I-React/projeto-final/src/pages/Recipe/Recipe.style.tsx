@@ -87,7 +87,7 @@ export const RecipeInfoList = styled.div`
 `;
 
 export const IngredientLabel = styled.label<IngredientLabel>`
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: flex-start;
   font-weight: 600;
@@ -95,6 +95,7 @@ export const IngredientLabel = styled.label<IngredientLabel>`
   text-decoration: ${({ ischecked }) =>
     ischecked === "true" ? "line-through" : "none"};
   color: ${({ ischecked }) => (ischecked === "true" ? "#797777" : "inherit")};
+
 `;
 
 export const IngredientsContent = styled.div`
