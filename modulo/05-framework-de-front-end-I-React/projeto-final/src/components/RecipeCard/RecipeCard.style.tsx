@@ -18,7 +18,7 @@ export const CardImage = styled.img`
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
   width: 20rem;
-  height: 13.2rem
+  height: 13.2rem;
 `;
 
 export const CardDescription = styled.div`
@@ -34,7 +34,7 @@ export const CardInfo = styled.div`
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  background-color: rgb(255, 255, 255, 0.9);
+  background-color: rgb(255, 255, 255, 0.85);
   bottom: 0;
   left: 0;
   width: 100%;
@@ -57,13 +57,13 @@ export const CardSpan = styled.span`
 `;
 
 export const CardTitle = styled.h3`
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
 `;
 
 export const FakeLink = styled.span`
   color: ${({ theme }) => theme.colors.primary};
-  align-self: flex-end;
+  /* align-self: flex-end; */
   font-size: 1.3rem;
   font-weight: 500;
   text-decoration: underline;

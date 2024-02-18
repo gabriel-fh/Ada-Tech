@@ -24,7 +24,7 @@ import { getSlug } from "../../utils/utils";
 import { StyleSheetManager } from "styled-components";
 
 const Home = () => {
-  const data: Recipes[] = recipesData.recipes;
+  const data: Recipe[] = recipesData.recipes;
 
   const categoryData: { name: string; image: string }[] = [
     {

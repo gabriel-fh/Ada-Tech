@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Main = styled.main`
   padding: 4.9rem 0;
-  min-height: 92.3vh
+  min-height: 92.2vh;
 `;
 
 export const Section = styled.section`
@@ -31,17 +31,16 @@ export const SubTitle = styled.h2`
 `;
 
 export const CardSlider = styled.div`
-  padding: 2rem .5rem;
+  padding: 2rem 0.5rem;
   display: flex;
   /* flex-wrap: wrap; */
   /* justify-content: center; */
   gap: 1.5rem;
   overflow: auto;
   height: auto;
-
 `;
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  color: ${({theme}) => theme.colors.black}
+  color: ${({ theme }) => theme.colors.black};
 `;
