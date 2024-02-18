@@ -6,7 +6,7 @@ import {
   StyledLink,
 } from "./Navbar.style";
 
-function Navbar({ isOpen }: { isOpen: boolean }) {
+const Navbar = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <StyleSheetManager shouldForwardProp={(prop) => prop !== "is_open"}>
       <Nav isopen={isOpen.toString()}>

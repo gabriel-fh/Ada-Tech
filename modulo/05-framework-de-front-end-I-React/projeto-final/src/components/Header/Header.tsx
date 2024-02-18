@@ -10,7 +10,7 @@ import {
   MenuLine,
 } from "./Header.style";
 import { StyledLink } from "../Navbar/Navbar.style";
-function Header() {
+const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
 
   return (
