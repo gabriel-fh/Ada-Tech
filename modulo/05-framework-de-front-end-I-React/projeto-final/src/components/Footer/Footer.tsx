@@ -1,7 +1,6 @@
 const Footer = () => {
-    return(
-        <>asdf</>
-    )
-}
+  return <Footer></Footer>;
+};
 
 export default Footer;
+

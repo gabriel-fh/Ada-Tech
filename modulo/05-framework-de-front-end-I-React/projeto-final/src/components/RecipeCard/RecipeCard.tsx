@@ -62,10 +62,6 @@ const RecipeCard = ({ title, prepTime, servings, image }: RecipeCardProps) => {
             <Icon icon="streamline:serving-dome-solid" />
             {servings}
           </CardSpan>
-          {/* <CardSpan>
-          <Icon icon="iconamoon:category-fill" />
-            Massa
-          </CardSpan> */}
         </CardInfo>
       </CardImageContent>
       <CardDescription>
