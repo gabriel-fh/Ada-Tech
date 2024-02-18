@@ -7,6 +7,7 @@ export const Card = styled.div`
   height: 21rem;
   border-radius: 0.7rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
 `;
 
 export const CardImageContent = styled.div`
@@ -23,18 +24,8 @@ export const CardDescription = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
-
-  & > {
-    &:nth-child(2) {
-      color: ${({ theme }) => theme.colors.primary};
-      align-self: flex-end;
-      font-size: 1.3rem;
-      font-weight: 500;
-      text-decoration: underline;
-      text-decoration-thickness: 0.15rem;
-      cursor: pointer;
-    }
-  }
+  justify-content: space-between;
+  height: 100%;
 `;
 
 export const CardInfo = styled.div`
@@ -65,6 +56,16 @@ export const CardSpan = styled.span`
 `;
 
 export const CardTitle = styled.h3`
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 600;
+`;
+
+export const FakeLink = styled.span`
+  color: ${({ theme }) => theme.colors.primary};
+  align-self: flex-end;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15rem;
+  cursor: pointer;
 `;

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   Card,
   CardDescription,
@@ -7,6 +6,7 @@ import {
   CardInfo,
   CardSpan,
   CardTitle,
+  FakeLink,
 } from "./RecipeCard.style";
 import { Icon } from "@iconify/react";
 
@@ -38,13 +38,11 @@ function RecipeCard({ title, prepTime, servings }: RecipeCardProps) {
     let formatedPrepTime: string = "";
 
     if (hour > 0) {
-      formatedPrepTime += `${hour} ${hour === 1 ? "h" : "hs"}`;
+      formatedPrepTime += `${hour}h`;
     }
 
     if (min > 0) {
-      formatedPrepTime += `${formatedPrepTime.length > 0 ? " e " : ""}${min} ${
-        min === 1 ? "min" : "mins"
-      }`;
+      formatedPrepTime += `${formatedPrepTime.length > 0 ? " e " : ""}${min}min`;
     }
 
     return formatedPrepTime;
@@ -71,7 +69,7 @@ function RecipeCard({ title, prepTime, servings }: RecipeCardProps) {
       </CardImageContent>
       <CardDescription>
         <CardTitle>{title}</CardTitle>
-        <Link to={"/recipe"}>Ver receita</Link>
+        <FakeLink>Ver receita</FakeLink>
       </CardDescription>
     </Card>
   );

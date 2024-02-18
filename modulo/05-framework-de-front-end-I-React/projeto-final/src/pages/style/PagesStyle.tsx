@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Main = styled.main`
@@ -36,4 +37,10 @@ export const CardSlider = styled.div`
   gap: 1.5rem;
   overflow: auto;
   height: auto;
+
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({theme}) => theme.colors.black}
 `;
