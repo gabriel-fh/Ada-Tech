@@ -21,6 +21,7 @@ import {
 
 import recipesData from "../../data/recipesData.json";
 import { getSlug } from "../../utils/utils";
+import { StyleSheetManager } from "styled-components";
 
 const Home = () => {
   const data: Recipes[] = recipesData.recipes;
@@ -43,13 +44,16 @@ const Home = () => {
     },
     {
       name: "Bebidas",
-      image: "https://media.istockphoto.com/id/105597995/pt/foto/mojito-cocktail.jpg?s=612x612&w=0&k=20&c=H3SnEqux-dPlFGIFWIJ_cSOMfWDOUzPwUEEaWDxoCVc=",
+      image:
+        "https://media.istockphoto.com/id/105597995/pt/foto/mojito-cocktail.jpg?s=612x612&w=0&k=20&c=H3SnEqux-dPlFGIFWIJ_cSOMfWDOUzPwUEEaWDxoCVc=",
     },
     {
       name: "Pratos Principais",
-      image: "https://media.istockphoto.com/id/1268693109/pt/foto/roast-chicken.jpg?s=612x612&w=0&k=20&c=OoC84ofLPb9_TeoKf9T-dATqBCBbJJ9j3578HLgJS_M=",
+      image:
+        "https://media.istockphoto.com/id/1268693109/pt/foto/roast-chicken.jpg?s=612x612&w=0&k=20&c=OoC84ofLPb9_TeoKf9T-dATqBCBbJJ9j3578HLgJS_M=",
     },
   ];
+
   return (
     <Main>
       <Section className="text-image">
@@ -93,7 +97,9 @@ const Home = () => {
           {categoryData.map((item, index) => (
             <CategoryContent key={index}>
               <CategoryImage>
-                <RoundedImage backgroundImage={item.image} />
+                <StyleSheetManager shouldForwardProp={(prop) => prop !== item.image}>
+                  <RoundedImage backgroundimage={item.image} />
+                </StyleSheetManager>
               </CategoryImage>
               <CategoryName>{item.name}</CategoryName>
             </CategoryContent>
