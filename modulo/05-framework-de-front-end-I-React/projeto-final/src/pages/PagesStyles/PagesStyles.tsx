@@ -4,6 +4,10 @@ import styled from "styled-components";
 export const Main = styled.main`
   padding: 4.9rem 0;
   min-height: 92.2vh;
+
+  @media screen and (min-width: 768px) {
+    padding: 8rem 0;
+  }
 `;
 
 export const Section = styled.section`
@@ -18,6 +22,14 @@ export const Section = styled.section`
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  @media screen and (min-width: 768px) {
+    padding: 2rem 2.5rem;
+
+    &.text-image {
+      flex-wrap: nowrap !important;
+    }
+  }
 `;
 
 export const HighlightedText = styled.span`
@@ -28,6 +40,10 @@ export const HighlightedText = styled.span`
 export const SubTitle = styled.h2`
   font-size: 2.1rem;
   font-weight: 600;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const CardSlider = styled.div`
@@ -52,5 +68,13 @@ export const CategoriesContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 1.4rem;
-`;
 
+  @media screen and (min-width: 425px) {
+    gap: 2.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 3rem 1.5rem;
+    gap: 3.5rem;
+  }
+`;

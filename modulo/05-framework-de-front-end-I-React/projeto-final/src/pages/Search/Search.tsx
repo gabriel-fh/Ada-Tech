@@ -5,7 +5,7 @@ import {
   Section,
   StyledLink,
   SubTitle,
-} from "../PagesStyle/PagesStyle";
+} from "../PagesStyles/PagesStyles";
 import {
   FilterContent,
   FilterItem,

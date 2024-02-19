@@ -7,7 +7,7 @@ import {
   Section,
   StyledLink,
   SubTitle,
-} from "../PagesStyle/PagesStyle";
+} from "../PagesStyles/PagesStyles";
 import { ImageContent, MainImage, TextContent, Title } from "./Home.style";
 
 import recipesData from "../../data/recipesData.json";

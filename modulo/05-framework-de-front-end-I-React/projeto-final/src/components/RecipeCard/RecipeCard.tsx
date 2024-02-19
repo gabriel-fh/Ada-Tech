@@ -7,7 +7,6 @@ import {
   CardInfo,
   CardSpan,
   CardTitle,
-  FakeLink,
 } from "./RecipeCard.style";
 import { Icon } from "@iconify/react";
 
@@ -38,7 +37,6 @@ function RecipeCard({ title, prepTime, servings, image }: RecipeCardProps) {
       </CardImageContent>
       <CardDescription>
         <CardTitle>{title}</CardTitle>
-        <FakeLink>Ver receita</FakeLink>
       </CardDescription>
     </Card>
   );

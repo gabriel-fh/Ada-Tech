@@ -8,10 +8,10 @@ interface NavProps {
 export const Nav = styled.nav<NavProps>`
   position: fixed;
   top: 7.19vh;
-  right: ${(props) => (props.isopen == 'true' ? '0' : '-100%')};
+  right: ${(props) => (props.isopen == "true" ? "0" : "-100%")};
   width: 61%;
   height: 100vh;
-  background-color: ${({theme}) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
   transition: all 0.5s;
   z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 50px 15px 0px;
@@ -19,6 +19,14 @@ export const Nav = styled.nav<NavProps>`
   &.closeNavigation {
     position: absolute;
     left: -100%;
+  }
+
+  @media screen and (min-width: 425px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 40%;
   }
 `;
 
@@ -36,6 +44,10 @@ export const NavgationListItem = styled.li`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 2rem;
-  font-weight: 500;
-  color: ${({theme}) => theme.colors.white};
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.white};
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.3rem;
+  }
 `;
