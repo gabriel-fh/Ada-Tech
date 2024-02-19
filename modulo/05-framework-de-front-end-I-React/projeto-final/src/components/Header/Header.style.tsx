@@ -16,8 +16,14 @@ export const StyledHeader = styled.header`
   }
 
   @media screen and (min-width: 768px) {
-    padding: 1.7rem 2.2rem;
+    padding: 1.2rem 2.2rem;
   }
+
+  @media screen and (min-width: 1024px) {
+    padding: .2rem 2rem;
+  }
+
+  
 `;
 export const Logo = styled.div`
   display: flex;
@@ -31,6 +37,11 @@ export const LogoImage = styled.img`
   @media screen and (min-width: 768px) {
     width: 3.5rem;
     height: 3.5rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 4.5rem;
+    height: 4.5rem;
   }
 `;
 
@@ -46,6 +57,10 @@ export const LogoTitle = styled.span`
 
   @media screen and (min-width: 768px) {
     font-size: 1.9rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 2.5rem;
   }
 `;
 

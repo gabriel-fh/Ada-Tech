@@ -21,7 +21,11 @@ export const CategoryName = styled.h3`
   font-weight: 600;
 
   @media screen and (min-width: 768px) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 1.7rem;
   }
 `;
 
@@ -32,11 +36,17 @@ export const CategoryImage = styled.div`
   outline: .3rem solid ${({theme}) => theme.colors.primary};
   display: grid;
   place-items: center;
-
+  
   @media screen and (min-width: 768px) {
     width: 10rem;
     height: 10rem
   }
+  
+    @media screen and (min-width: 1024px) {
+      width: 10.5rem;
+      height: 10.5rem;
+      outline: .35rem solid ${({theme}) => theme.colors.primary};
+    }
 
 `;
 
@@ -48,8 +58,14 @@ export const RoundedImage = styled.div<RoundedImageProps>`
   background-repeat: no-repeat;
   background-position: center;
   background-size: 200%;
+
   @media screen and (min-width: 768px) {
     width: 9.5rem;
     height: 9.5rem
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 10rem;
+    height: 10rem
   }
 `;

@@ -44,16 +44,45 @@ export const SubTitle = styled.h2`
   @media screen and (min-width: 768px) {
     font-size: 2.5rem;
   }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 2.8rem;
+  }
 `;
 
-export const CardSlider = styled.div`
+export const CardWrapper = styled.div`
   padding: 2rem 0.5rem;
   display: flex;
-  /* flex-wrap: wrap; */
-  /* justify-content: center; */
   gap: 1.5rem;
   overflow: auto;
   height: auto;
+
+  @media screen and (min-width: 1024px) {
+    padding: 3rem 0.5rem;
+    gap: 2.5rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: auto;
+    height: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #bfbdbd;
+    border-radius: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #e5e4e4;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #a5a4a4;
+  }
 `;
 
 export const StyledLink = styled(Link)`
@@ -76,5 +105,11 @@ export const CategoriesContainer = styled.div`
   @media screen and (min-width: 768px) {
     padding: 3rem 1.5rem;
     gap: 3.5rem;
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 4rem 1.5rem;
+    gap: 5rem;
   }
 `;

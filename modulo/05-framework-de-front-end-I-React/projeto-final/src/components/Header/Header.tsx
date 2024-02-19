@@ -13,6 +13,7 @@ import { StyledLink } from "../Navbar/Navbar.style";
 function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
   const headerRef = useRef<HTMLDivElement>(null);
+  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -32,6 +33,18 @@ function Header() {
     };
   }, [menuIsOpen]);
 
+  const updateScreenWidth = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateScreenWidth);
+
+    return () => {
+      window.removeEventListener('resize', updateScreenWidth);
+    };
+  }, []);
+
   return (
     <StyledHeader ref={headerRef} className={menuIsOpen ? "changeColor" : ""}>
       <StyledLink to={"/"}>
@@ -46,7 +59,8 @@ function Header() {
         </Logo>
       </StyledLink>
       <Navbar isOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
-      <HamburgerMenu
+      {screenWidth < 1024 && (
+        <HamburgerMenu
         onClick={() => setMenuIsOpen(!menuIsOpen)}
         className={menuIsOpen ? "isOpen" : ""}
       >
@@ -54,6 +68,7 @@ function Header() {
         <MenuLine></MenuLine>
         <MenuLine></MenuLine>
       </HamburgerMenu>
+      )}
     </StyledHeader>
   );
 }

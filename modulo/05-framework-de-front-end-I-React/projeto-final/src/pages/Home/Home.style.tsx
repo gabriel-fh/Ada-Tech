@@ -13,6 +13,12 @@ export const Title = styled.h1`
     line-height: 4rem;
     letter-spacing: 0.07rem;
   }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 3.5rem;
+    line-height: 5rem;
+    letter-spacing: 0.15rem;
+  }
 `;
 
 export const TextContent = styled.div`
@@ -37,9 +43,13 @@ export const MainImage = styled.img`
   height: 27rem;
   transform: scaleX(-1);
   transform: rotate(-40deg);
-  /* filter: drop-shadow(-10px 9px 50px #b3b1b1); */
   @media screen and (min-width: 768px) {
     width: 31rem;
     height: 31rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 33rem;
+    height: 33rem;
   }
 `;

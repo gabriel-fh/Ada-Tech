@@ -1,6 +1,6 @@
 import RecipeCard from "../../components/RecipeCard";
 import {
-  CardSlider,
+  CardWrapper,
   CategoriesContainer,
   HighlightedText,
   Main,
@@ -64,7 +64,7 @@ const Home = () => {
         <SubTitle>
           Receitas <HighlightedText>populares</HighlightedText>
         </SubTitle>
-        <CardSlider>
+        <CardWrapper>
           {data.map((item) => (
             <StyledLink
               to={`/recipe/${encodeURI(getSlug(item.title))}/${item.id}`}
@@ -79,7 +79,7 @@ const Home = () => {
               />
             </StyledLink>
           ))}
-        </CardSlider>
+        </CardWrapper>
       </Section>
       <Section>
         <SubTitle>

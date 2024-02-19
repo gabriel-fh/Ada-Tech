@@ -134,8 +134,7 @@ const Search = () => {
                     title={item.title}
                     prepTime={item.prepTime}
                     servings={item.servings}
-                    image={item.image}
-                  />
+                    image={item.image} description={item.ingredients}                  />
                 </StyledLink>
               ))
             ) : (
