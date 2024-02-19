@@ -13,7 +13,10 @@ export const StyledHeader = styled.header`
   transition: all 0.5s;
   &.changeColor {
     background-color: ${({ theme }) => theme.colors.primary};
-    
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 1.7rem 2.2rem;
   }
 `;
 export const Logo = styled.div`
@@ -25,7 +28,10 @@ export const Logo = styled.div`
 export const LogoImage = styled.img`
   width: 2.9rem;
   height: 2.9rem;
-  
+  @media screen and (min-width: 768px) {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 `;
 
 export const LogoTitle = styled.span`
@@ -36,6 +42,10 @@ export const LogoTitle = styled.span`
 
   &.changeColor {
     color: ${({ theme }) => theme.colors.white};
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.9rem;
   }
 `;
 

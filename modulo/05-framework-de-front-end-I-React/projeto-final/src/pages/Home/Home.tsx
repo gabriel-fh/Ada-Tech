@@ -1,30 +1,21 @@
 import RecipeCard from "../../components/RecipeCard";
 import {
   CardSlider,
+  CategoriesContainer,
   HighlightedText,
   Main,
   Section,
   StyledLink,
   SubTitle,
-} from "../style/PagesStyle";
-import {
-  CategoriesContainer,
-  CategoryContent,
-  CategoryImage,
-  CategoryName,
-  ImageContent,
-  MainImage,
-  RoundedImage,
-  TextContent,
-  Title,
-} from "./Home.style";
+} from "../PagesStyles/PagesStyles";
+import { ImageContent, MainImage, TextContent, Title } from "./Home.style";
 
 import recipesData from "../../data/recipesData.json";
 import { getSlug } from "../../utils/utils";
-import { StyleSheetManager } from "styled-components";
+import CategorieCard from "../../components/CategoryCard";
 
 const Home = () => {
-  const data: Recipes[] = recipesData.recipes;
+  const data: Recipe[] = recipesData.recipes;
 
   const categoryData: { name: string; image: string }[] = [
     {
@@ -53,6 +44,7 @@ const Home = () => {
         "https://media.istockphoto.com/id/1268693109/pt/foto/roast-chicken.jpg?s=612x612&w=0&k=20&c=OoC84ofLPb9_TeoKf9T-dATqBCBbJJ9j3578HLgJS_M=",
     },
   ];
+
   return (
     <Main>
       <Section className="text-image">
@@ -94,16 +86,9 @@ const Home = () => {
         </SubTitle>
         <CategoriesContainer>
           {categoryData.map((item, index) => (
-            <CategoryContent key={index}>
-              <CategoryImage>
-                <StyleSheetManager
-                  shouldForwardProp={(prop) => prop !== item.image}
-                >
-                  <RoundedImage backgroundimage={item.image} />
-                </StyleSheetManager>
-              </CategoryImage>
-              <CategoryName>{item.name}</CategoryName>
-            </CategoryContent>
+            <StyledLink to={`/search/${getSlug(item.name)}`} key={index}>
+              <CategorieCard image={item.image} name={item.name} />
+            </StyledLink>
           ))}
         </CategoriesContainer>
       </Section>

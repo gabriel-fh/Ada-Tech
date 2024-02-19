@@ -8,6 +8,11 @@ export const Card = styled.div`
   border-radius: 0.7rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    width: 22rem;
+    height: 23rem;
+  }
 `;
 
 export const CardImageContent = styled.div`
@@ -18,14 +23,19 @@ export const CardImage = styled.img`
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
   width: 20rem;
-  height: 13.2rem
+  height: 13.2rem;
+  @media screen and (min-width: 768px) {
+    width: 22rem;
+    height: 15rem;
+  }
 `;
 
 export const CardDescription = styled.div`
   padding: 1rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   height: 100%;
 `;
 
@@ -54,19 +64,24 @@ export const CardSpan = styled.span`
       font-size: 1.5rem;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.4rem;
+
+    & > {
+      &:nth-child(1) {
+        font-size: 1.7rem;
+      }
+    }
+  }
 `;
 
 export const CardTitle = styled.h3`
   font-size: 1.7rem;
   font-weight: 600;
+  letter-spacing: 0.05rem;
+  @media screen and (min-width: 768px) {
+    font-size: 1.9rem;
+  }
 `;
 
-export const FakeLink = styled.span`
-  color: ${({ theme }) => theme.colors.primary};
-  align-self: flex-end;
-  font-size: 1.3rem;
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-thickness: 0.15rem;
-  cursor: pointer;
-`;

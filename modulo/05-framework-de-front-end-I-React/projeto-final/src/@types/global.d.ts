@@ -1,4 +1,4 @@
-interface Recipes {
+interface Recipe {
   id: number;
   title: string;
   category: string;

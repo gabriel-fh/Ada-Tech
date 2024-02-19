@@ -1,5 +1,4 @@
-// import HamburgerMenu from "../HamburgerMenu";
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Navbar from "../Navbar";
 import {
   Logo,
@@ -10,23 +9,48 @@ import {
   MenuLine,
 } from "./Header.style";
 import { StyledLink } from "../Navbar/Navbar.style";
+
 function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node) &&
+        menuIsOpen
+      ) {
+        setMenuIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menuIsOpen]);
 
   return (
-    <StyledHeader className={menuIsOpen ? 'changeColor' : ''}>
-      <StyledLink to={'/'}>
+    <StyledHeader ref={headerRef} className={menuIsOpen ? "changeColor" : ""}>
+      <StyledLink to={"/"}>
         <Logo>
-          <LogoImage src={menuIsOpen ? './recipedia2.svg' : 'recipedia.svg'} alt={'Recipédia Logo'} />
-          <LogoTitle className={menuIsOpen ? 'changeColor' : ''} >Recipédia</LogoTitle>
+          <LogoImage
+            src={menuIsOpen ? "/recipedia2.svg" : "/recipedia.svg"}
+            alt={"Recipédia Logo"}
+          />
+          <LogoTitle className={menuIsOpen ? "changeColor" : ""}>
+            Recipédia
+          </LogoTitle>
         </Logo>
       </StyledLink>
-      <Navbar isOpen={menuIsOpen} />
+      <Navbar isOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
       <HamburgerMenu
         onClick={() => setMenuIsOpen(!menuIsOpen)}
         className={menuIsOpen ? "isOpen" : ""}
       >
-        <MenuLine ></MenuLine>
+        <MenuLine></MenuLine>
         <MenuLine></MenuLine>
         <MenuLine></MenuLine>
       </HamburgerMenu>
