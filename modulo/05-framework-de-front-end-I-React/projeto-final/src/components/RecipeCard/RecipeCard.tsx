@@ -1,6 +1,7 @@
 import { formatPrepTime } from "../../utils/utils";
 import {
   Card,
+  CardDesc,
   CardDescription,
   CardImage,
   CardImageContent,
@@ -15,11 +16,16 @@ interface RecipeCardProps {
   prepTime: string;
   servings: string;
   image: string;
+  description: string[];
 }
 
-function RecipeCard({ title, prepTime, servings, image }: RecipeCardProps) {
-  
-
+function RecipeCard({
+  title,
+  prepTime,
+  servings,
+  image,
+  description,
+}: RecipeCardProps) {
   return (
     <Card>
       <CardImageContent>
@@ -37,6 +43,11 @@ function RecipeCard({ title, prepTime, servings, image }: RecipeCardProps) {
       </CardImageContent>
       <CardDescription>
         <CardTitle>{title}</CardTitle>
+        <CardDesc>
+          {description.map((item, index) => (
+            <span key={index}>{item}; </span>
+          ))}
+        </CardDesc>
       </CardDescription>
     </Card>
   );

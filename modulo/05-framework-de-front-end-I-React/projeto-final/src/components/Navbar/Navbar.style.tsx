@@ -23,6 +23,7 @@ export const Nav = styled.nav<NavProps>`
 
   @media screen and (min-width: 425px) {
     width: 50%;
+    top: 6.9rem
   }
 
   @media screen and (min-width: 768px) {

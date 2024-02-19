@@ -75,6 +75,7 @@ const Home = () => {
                 prepTime={item.prepTime}
                 servings={item.servings}
                 image={item.image}
+                description={item.ingredients}
               />
             </StyledLink>
           ))}
