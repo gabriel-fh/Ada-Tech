@@ -19,6 +19,12 @@ export const Title = styled.h1`
     line-height: 5rem;
     letter-spacing: 0.15rem;
   }
+
+  @media screen and (min-width: 1080px) {
+    font-size: 4rem;
+    line-height: 6rem;
+    letter-spacing: 0.2rem;
+  }
 `;
 
 export const TextContent = styled.div`
@@ -36,13 +42,17 @@ export const ImageContent = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
+
+  @media screen and (min-width: 1080px) {
+    padding-right: 5rem;
+    justify-content: none;
+  }
+
 `;
 
 export const MainImage = styled.img`
   width: 27rem;
   height: 27rem;
-  transform: scaleX(-1);
-  transform: rotate(-40deg);
   @media screen and (min-width: 768px) {
     width: 31rem;
     height: 31rem;
@@ -51,5 +61,10 @@ export const MainImage = styled.img`
   @media screen and (min-width: 1024px) {
     width: 33rem;
     height: 33rem;
+  }
+
+  @media screen and (min-width: 1080px) {
+    width: 40rem;
+    height: 40rem;
   }
 `;

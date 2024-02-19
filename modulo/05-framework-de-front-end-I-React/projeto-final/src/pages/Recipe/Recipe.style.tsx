@@ -70,7 +70,7 @@ export const ExtraInfo = styled.span<ExtraInfoProps>`
     color: ${({ theme }) => theme.colors.white};
 
     & :nth-child(1) {
-        margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 `;
@@ -95,7 +95,6 @@ export const IngredientLabel = styled.label<IngredientLabel>`
   text-decoration: ${({ ischecked }) =>
     ischecked === "true" ? "line-through" : "none"};
   color: ${({ ischecked }) => (ischecked === "true" ? "#797777" : "inherit")};
-
 `;
 
 export const IngredientsContent = styled.div`
