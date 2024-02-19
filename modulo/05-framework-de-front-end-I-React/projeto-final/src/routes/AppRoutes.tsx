@@ -21,7 +21,7 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/recipe/:name?/:id?" element={<Recipe />} />
-      <Route path="/search" element={<Search />} />
+      <Route path="/search/:name?" element={<Search />} />
     </Routes>
   );
 };

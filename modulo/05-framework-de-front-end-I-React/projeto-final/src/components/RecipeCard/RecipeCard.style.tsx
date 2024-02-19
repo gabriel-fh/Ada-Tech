@@ -34,7 +34,7 @@ export const CardInfo = styled.div`
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  background-color: rgb(255, 255, 255, 0.85);
+  background-color: rgb(255, 255, 255, 0.89);
   bottom: 0;
   left: 0;
   width: 100%;

@@ -1,32 +1,99 @@
-import { Main, SearchResults, Section, StyledLink } from "../style/PagesStyle";
-import { SearchBar, SearchBarContent, StyledIcon } from "./Search.style";
+import {
+  CategoriesContainer,
+  HighlightedText,
+  Main,
+  Section,
+  StyledLink,
+  SubTitle,
+} from "../PagesStyle/PagesStyle";
+import {
+  FilterContent,
+  FilterItem,
+  SearchBar,
+  SearchBarContent,
+  SearchResults,
+  StyledIcon,
+} from "./Search.style";
 import { ChangeEvent, useEffect, useState } from "react";
 import RecipeCard from "../../components/RecipeCard";
 import { getSlug } from "../../utils/utils";
 import recipesData from "../../data/recipesData.json";
+import CategorieCard from "../../components/CategoryCard";
+import { useParams, useNavigate, NavigateFunction } from "react-router-dom";
+import { Icon } from "@iconify/react/dist/iconify.js";
+
+type RecipeKey = "title" | "category";
 
 const Search = () => {
   const data: Recipe[] = recipesData.recipes;
 
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Recipe[] | null>(null);
+  const [isSearching, setIsSearching] = useState<boolean>(false);
+  const navigate: NavigateFunction = useNavigate();
 
   const handleChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 
+  const { name } = useParams();
+
+  const searchRecipe = (
+    term: string,
+    attribute: RecipeKey
+  ): Recipe[] | null => {
+    const filteredResults: Recipe[] | null = data.filter((item) =>
+      item[attribute].toLowerCase().includes(term.toLowerCase())
+    );
+    return filteredResults;
+  };
+
+  const searchByCategory = (name: string): Recipe[] | null => {
+    const filteredResults: Recipe[] | null = searchRecipe(name, "category");
+    return filteredResults;
+  };
+
+  const categoryData: { name: string; image: string }[] = [
+    {
+      name: "Massas",
+      image:
+        "https://media.istockphoto.com/id/1056314414/pt/foto/pasta-pesto-sauce-and-vegetables-on-white-background.jpg?s=612x612&w=0&k=20&c=zGoDMmFCbq885XFqJNgq8X90jnqHEkR6pzA9X_VzdAY=",
+    },
+    {
+      name: "Saladas",
+      image:
+        "https://media.istockphoto.com/id/1917934177/pt/foto/delicious-salad-in-bowl-isolated-on-white-top-view.jpg?s=612x612&w=0&k=20&c=ZnirermwusmQrXk4daYwQs3Nr0DhLGYVydmH--Q1uHQ=",
+    },
+    {
+      name: "Sobremesas",
+      image:
+        "https://t3.ftcdn.net/jpg/05/74/69/60/360_F_574696092_7N3HZQKEVr2AHWl9oPohNgbpPZo0AutP.jpg",
+    },
+    {
+      name: "Bebidas",
+      image:
+        "https://media.istockphoto.com/id/105597995/pt/foto/mojito-cocktail.jpg?s=612x612&w=0&k=20&c=H3SnEqux-dPlFGIFWIJ_cSOMfWDOUzPwUEEaWDxoCVc=",
+    },
+    {
+      name: "Pratos Principais",
+      image:
+        "https://media.istockphoto.com/id/1268693109/pt/foto/roast-chicken.jpg?s=612x612&w=0&k=20&c=OoC84ofLPb9_TeoKf9T-dATqBCBbJJ9j3578HLgJS_M=",
+    },
+  ];
+
   useEffect(() => {
     if (searchTerm.length > 2) {
-      const filteredResults: Recipe[] | null = data.filter((item) =>
-        item.title.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setSearchResults(filteredResults);
-      console.log(searchResults);
+      setIsSearching(true);
+      setSearchResults(searchRecipe(searchTerm, "title"));
+    } else if (name) {
+      setIsSearching(true);
+      setSearchResults(searchByCategory(name.split('-').join(' ')));
     } else {
-      setSearchResults(null)
+      setIsSearching(false);
+      setSearchResults(null);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchTerm]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchTerm, name]);
 
   return (
     <Main>
@@ -39,7 +106,20 @@ const Search = () => {
           ></SearchBar>
           <StyledIcon icon={"tabler:search"} inline></StyledIcon>
           <StyledIcon icon={"ic:round-close"} inline></StyledIcon>
+          <StyledIcon icon={"ion:filter"} inline />
         </SearchBarContent>
+        {name && !searchTerm && (
+          <FilterContent>
+            <FilterItem>
+              {name}
+              <Icon
+                icon={"ic:round-close"}
+                inline
+                onClick={() => navigate("/search")}
+              ></Icon>
+            </FilterItem>
+          </FilterContent>
+        )}
         <SearchResults>
           {searchTerm.length > 0 && searchTerm.length < 3 ? (
             <>Digitar no minimo 3 caracteres</>
@@ -62,7 +142,24 @@ const Search = () => {
               <>nada encontrado</>
             )
           ) : (
-            <>Conteudo Padrão</>
+            !searchResults &&
+            !isSearching && (
+              <>
+                <SubTitle>
+                  Navegue por <HighlightedText>categorias</HighlightedText>
+                </SubTitle>
+                <CategoriesContainer>
+                  {categoryData.map((item, index) => (
+                    <StyledLink
+                      to={`/search/${getSlug(item.name)}`}
+                      key={index}
+                    >
+                      <CategorieCard image={item.image} name={item.name} />
+                    </StyledLink>
+                  ))}
+                </CategoriesContainer>
+              </>
+            )
           )}
         </SearchResults>
       </Section>

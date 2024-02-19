@@ -45,10 +45,12 @@ export const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.black};
 `;
 
-export const SearchResults = styled.div `
-  padding: 4rem 0;
+export const CategoriesContainer = styled.div`
+  padding: 2rem 1rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.4rem;
 `;
+

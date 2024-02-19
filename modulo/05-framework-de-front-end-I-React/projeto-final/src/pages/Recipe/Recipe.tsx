@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Main, Section } from "../style/PagesStyle";
+import { Main, Section } from "../PagesStyle/PagesStyle";
 import recipesData from "../../data/recipesData.json";
 import { useState } from "react";
 import {
