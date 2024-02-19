@@ -106,7 +106,7 @@ export const IngredientsContent = styled.div`
 `;
 
 export const CheckBox = styled.input`
-  margin-top: 0.3rem;
+  /* margin-top: 0.3rem; */
   width: 1.5rem;
   height: 1.5rem;
   -webkit-appearance: none;

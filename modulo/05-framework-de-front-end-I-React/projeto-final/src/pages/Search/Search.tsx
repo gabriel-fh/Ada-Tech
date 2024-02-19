@@ -9,6 +9,7 @@ import {
 import {
   FilterContent,
   FilterItem,
+  ResponseSearch,
   SearchBar,
   SearchBarContent,
   SearchResults,
@@ -31,27 +32,7 @@ const Search = () => {
   const [searchResults, setSearchResults] = useState<Recipe[] | null>(null);
   const [isSearching, setIsSearching] = useState<boolean>(false);
   const navigate: NavigateFunction = useNavigate();
-
-  const handleChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
-  };
-
   const { name } = useParams();
-
-  const searchRecipe = (
-    term: string,
-    attribute: RecipeKey
-  ): Recipe[] | null => {
-    const filteredResults: Recipe[] | null = data.filter((item) =>
-      item[attribute].toLowerCase().includes(term.toLowerCase())
-    );
-    return filteredResults;
-  };
-
-  const searchByCategory = (name: string): Recipe[] | null => {
-    const filteredResults: Recipe[] | null = searchRecipe(name, "category");
-    return filteredResults;
-  };
 
   const categoryData: { name: string; image: string }[] = [
     {
@@ -81,13 +62,32 @@ const Search = () => {
     },
   ];
 
+  const handleChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const searchRecipe = (
+    term: string,
+    attribute: RecipeKey
+  ): Recipe[] | null => {
+    const filteredResults: Recipe[] | null = data.filter((item) =>
+      item[attribute].toLowerCase().includes(term.toLowerCase())
+    );
+    return filteredResults;
+  };
+
+  const searchByCategory = (name: string): Recipe[] | null => {
+    const filteredResults: Recipe[] | null = searchRecipe(name, "category");
+    return filteredResults;
+  };
+
   useEffect(() => {
     if (searchTerm.length > 2) {
       setIsSearching(true);
       setSearchResults(searchRecipe(searchTerm, "title"));
     } else if (name) {
       setIsSearching(true);
-      setSearchResults(searchByCategory(name.split('-').join(' ')));
+      setSearchResults(searchByCategory(name.split("-").join(" ")));
     } else {
       setIsSearching(false);
       setSearchResults(null);
@@ -102,11 +102,11 @@ const Search = () => {
           <SearchBar
             type="text"
             placeholder="Pesquisar..."
+            value={searchTerm}
             onChange={handleChangeInput}
-          ></SearchBar>
-          <StyledIcon icon={"tabler:search"} inline></StyledIcon>
-          <StyledIcon icon={"ic:round-close"} inline></StyledIcon>
-          <StyledIcon icon={"ion:filter"} inline />
+          />
+          <StyledIcon icon={"tabler:search"} inline />
+          {searchTerm && <StyledIcon icon={"ic:round-close"} inline onClick={() => setSearchTerm('')} />}
         </SearchBarContent>
         {name && !searchTerm && (
           <FilterContent>
@@ -122,7 +122,7 @@ const Search = () => {
         )}
         <SearchResults>
           {searchTerm.length > 0 && searchTerm.length < 3 ? (
-            <>Digitar no minimo 3 caracteres</>
+            <ResponseSearch>Digite no mínimo 3 caracteres</ResponseSearch>
           ) : searchResults ? (
             searchResults.length > 0 ? (
               searchResults.map((item) => (
@@ -139,7 +139,9 @@ const Search = () => {
                 </StyledLink>
               ))
             ) : (
-              <>nada encontrado</>
+              <ResponseSearch>
+                Não foi possível encontrar a receita pesquisada.
+              </ResponseSearch>
             )
           ) : (
             !searchResults &&

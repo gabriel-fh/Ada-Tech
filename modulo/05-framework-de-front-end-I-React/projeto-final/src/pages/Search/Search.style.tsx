@@ -18,14 +18,12 @@ export const SearchBarContent = styled.form`
 
   & > {
     &:nth-child(2) {
-      position: absolute;
       left: 1rem;
       top: 0.5rem;
     }
 
     &:nth-child(3) {
-      position: absolute;
-      right: 4rem;
+      right: 1rem;
       top: 0.5rem;
     }
   }
@@ -44,6 +42,8 @@ export const SearchBar = styled.input`
 export const StyledIcon = styled(Icon)`
   font-size: 2.2rem;
   color: #4c4c4c;
+  position: absolute;
+
 `;
 
 export const FilterContent = styled.div`
@@ -70,3 +70,8 @@ export const FilterItem = styled.span`
   }
 `;
 
+export const ResponseSearch = styled.span `
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 500
+`

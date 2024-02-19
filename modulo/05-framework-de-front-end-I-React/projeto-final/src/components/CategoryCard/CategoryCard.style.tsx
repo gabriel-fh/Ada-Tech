@@ -12,6 +12,7 @@ export const CategoryContent = styled.div`
   align-content: space-between;
   gap: 1rem;
   min-height: 12rem;
+  cursor: pointer;
 `;
 
 

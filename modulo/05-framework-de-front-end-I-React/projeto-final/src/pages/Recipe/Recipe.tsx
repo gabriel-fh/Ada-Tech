@@ -27,11 +27,9 @@ const Recipe = () => {
 
   const { id } = useParams();
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [currentRecipe, setCurrentRecipe] = useState<Recipe | undefined>(
-    data.find((item) => item.id === Number(id))
+  const currentRecipe: Recipe | undefined = data.find(
+    (item) => item.id === Number(id)
   );
-
   const [checkedItems, setCheckedItems] = useState<boolean[]>(
     new Array(currentRecipe?.ingredients.length).fill(false)
   );
@@ -122,10 +120,9 @@ const Recipe = () => {
                 ))}
               </ListContent>
             </RecipeInfoList>
-            
           </>
         ) : (
-          <></>
+          <>Error</>
         )}
       </Section>
     </Main>
