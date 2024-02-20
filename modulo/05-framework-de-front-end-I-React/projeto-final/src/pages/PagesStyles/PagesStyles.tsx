@@ -31,7 +31,7 @@ export const Section = styled.section`
     }
   }
 
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1440px) {
     padding: 2rem 4rem;
   }
 `;

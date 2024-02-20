@@ -20,7 +20,7 @@ export const Title = styled.h1`
     letter-spacing: 0.15rem;
   }
 
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1440px) {
     font-size: 4rem;
     line-height: 6rem;
     letter-spacing: 0.2rem;
@@ -43,7 +43,7 @@ export const ImageContent = styled.div`
   justify-content: flex-end;
   width: 100%;
 
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1440px) {
     padding-right: 5rem;
     justify-content: none;
   }
@@ -63,7 +63,7 @@ export const MainImage = styled.img`
     height: 33rem;
   }
 
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1440px) {
     width: 40rem;
     height: 40rem;
   }
