@@ -30,6 +30,10 @@ export const Section = styled.section`
       flex-wrap: nowrap !important;
     }
   }
+
+  @media screen and (min-width: 1080px) {
+    padding: 2rem 4rem;
+  }
 `;
 
 export const HighlightedText = styled.span`

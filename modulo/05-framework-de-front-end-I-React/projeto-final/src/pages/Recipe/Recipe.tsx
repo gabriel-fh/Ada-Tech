@@ -17,6 +17,7 @@ import {
   IngredientLabel,
   ListItem,
   ListContent,
+  Ingredientsinstructions,
 } from "./Recipe.style";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { formatPrepTime } from "../../utils/utils";
@@ -85,41 +86,43 @@ const Recipe = () => {
                 </RecipeConditionals>
               )}
             </RecipeInfos>
-            <RecipeInfoList>
-              <RecipeTitle>Ingredientes</RecipeTitle>
-              <IngredientsContent>
-                {currentRecipe.ingredients.map((item, index) => (
-                  <StyleSheetManager
-                    shouldForwardProp={(prop) =>
-                      prop !== checkedItems[index].toString()
-                    }
-                    key={index}
-                  >
-                    <IngredientLabel
+            <Ingredientsinstructions>
+              <RecipeInfoList>
+                <RecipeTitle>Ingredientes</RecipeTitle>
+                <IngredientsContent>
+                  {currentRecipe.ingredients.map((item, index) => (
+                    <StyleSheetManager
+                      shouldForwardProp={(prop) =>
+                        prop !== checkedItems[index].toString()
+                      }
                       key={index}
-                      ischecked={checkedItems[index].toString()}
-                      htmlFor={index.toString()}
                     >
-                      <CheckBox
-                        type="checkbox"
-                        id={index.toString()}
-                        checked={checkedItems[index]}
-                        onChange={() => handleCheckboxChange(index)}
-                      />
-                      {item}
-                    </IngredientLabel>
-                  </StyleSheetManager>
-                ))}
-              </IngredientsContent>
-            </RecipeInfoList>
-            <RecipeInfoList>
-              <RecipeTitle>Modo de Preparo</RecipeTitle>
-              <ListContent>
-                {currentRecipe.instructions.map((item, index) => (
-                  <ListItem key={index}>{item}</ListItem>
-                ))}
-              </ListContent>
-            </RecipeInfoList>
+                      <IngredientLabel
+                        key={index}
+                        ischecked={checkedItems[index].toString()}
+                        htmlFor={index.toString()}
+                      >
+                        <CheckBox
+                          type="checkbox"
+                          id={index.toString()}
+                          checked={checkedItems[index]}
+                          onChange={() => handleCheckboxChange(index)}
+                        />
+                        {item}
+                      </IngredientLabel>
+                    </StyleSheetManager>
+                  ))}
+                </IngredientsContent>
+              </RecipeInfoList>
+              <RecipeInfoList>
+                <RecipeTitle>Modo de Preparo</RecipeTitle>
+                <ListContent>
+                  {currentRecipe.instructions.map((item, index) => (
+                    <ListItem key={index}>{item}</ListItem>
+                  ))}
+                </ListContent>
+              </RecipeInfoList>
+            </Ingredientsinstructions>
           </>
         ) : (
           <>Error</>

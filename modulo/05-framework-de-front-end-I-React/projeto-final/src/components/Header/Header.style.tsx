@@ -23,6 +23,10 @@ export const StyledHeader = styled.header`
     padding: .2rem 2rem;
   }
 
+  @media screen and (min-width: 1080px) {
+    padding: .2rem 3.7rem;
+  }
+
   
 `;
 export const Logo = styled.div`

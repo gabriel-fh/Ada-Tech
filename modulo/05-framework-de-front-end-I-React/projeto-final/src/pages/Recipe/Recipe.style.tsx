@@ -9,16 +9,41 @@ interface IngredientLabel {
 }
 export const RecipeTitle = styled.h2`
   font-size: 1.9rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (min-width: 1080px) {
+    font-size: 3rem;
+  }
 `;
 
 export const RecipeImageContent = styled.div`
   padding: 1.5rem 0;
+
+  @media screen and (min-width: 1024px) {
+    /* height: 45rem; */
+    padding: 3rem 0;
+  }
 `;
 
 export const RecipeImage = styled.img`
   width: 100%;
   height: 20rem;
   border-radius: 0.5rem;
+
+  @media screen and (min-width: 768px) {
+    height: 35rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 45rem;
+  }
+
+  @media screen and (min-width: 1080px) {
+    height: 60rem;
+  }
 `;
 
 export const RecipeInfos = styled.div`
@@ -41,6 +66,25 @@ export const RecipeInfoSpan = styled.span`
       font-size: 2.2rem;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 2rem;
+    & > {
+      &:nth-child(1) {
+        color: ${({ theme }) => theme.colors.primary};
+        font-size: 2.8rem;
+      }
+    }
+  }
+  @media screen and (min-width: 1080px) {
+    font-size: 2.3rem;
+    & > {
+      &:nth-child(1) {
+        color: ${({ theme }) => theme.colors.primary};
+        font-size: 3rem;
+      }
+    }
+  }
 `;
 
 export const RecipeInfosContent = styled.div`
@@ -49,12 +93,26 @@ export const RecipeInfosContent = styled.div`
   align-items: flex-start;
   flex-direction: column;
   gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    gap: 3rem;
+  }
+
+  @media screen and (min-width: 1080px) {
+    gap: 10rem;
+    flex-direction: row;
+  }
 `;
 
 export const RecipeConditionals = styled.div`
   display: grid;
   place-items: end;
   gap: 1rem;
+
+  @media screen and (min-width: 1080px) {
+    display: flex;
+    gap: 3rem;
+  }
 `;
 
 export const ExtraInfo = styled.span<ExtraInfoProps>`
@@ -73,6 +131,10 @@ export const ExtraInfo = styled.span<ExtraInfoProps>`
       margin-right: 0.5rem;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const RecipeInfoList = styled.div`
@@ -82,6 +144,25 @@ export const RecipeInfoList = styled.div`
     &:nth-child(1) {
       font-size: 1.8rem;
       font-weight: 700;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & > {
+      &:nth-child(1) {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 50%;
+  }
+  @media screen and (min-width: 768px) {
+    & > {
+      &:nth-child(1) {
+        font-size: 2.5rem;
+      }
     }
   }
 `;
@@ -95,6 +176,13 @@ export const IngredientLabel = styled.label<IngredientLabel>`
   text-decoration: ${({ ischecked }) =>
     ischecked === "true" ? "line-through" : "none"};
   color: ${({ ischecked }) => (ischecked === "true" ? "#797777" : "inherit")};
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+  @media screen and (min-width: 1080px) {
+    font-size: 2rem;
+  }
 `;
 
 export const IngredientsContent = styled.div`
@@ -102,10 +190,13 @@ export const IngredientsContent = styled.div`
   display: grid;
   place-items: start;
   gap: 0.7rem;
+
+  @media screen and (min-width: 768px) {
+    gap: 1rem;
+  }
 `;
 
 export const CheckBox = styled.input`
-  /* margin-top: 0.3rem; */
   width: 1.5rem;
   height: 1.5rem;
   -webkit-appearance: none;
@@ -139,7 +230,20 @@ export const CheckBox = styled.input`
 
   &:checked + label {
     text-decoration: line-through;
-    /* Outros estilos para o texto riscado, se necessário */
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  @media screen and (min-width: 1080px) {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    &::before {
+      font-size: 1.8rem;
+    }
   }
 `;
 
@@ -157,5 +261,23 @@ export const ListItem = styled.li`
   &::marker {
     color: ${({ theme }) => theme.colors.primary};
     font-weight: 700;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+  @media screen and (min-width: 1080px) {
+    font-size: 2rem;
+  }
+`;
+
+export const Ingredientsinstructions = styled.div`
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    gap: 1rem;
+  }
+
+  @media screen and (min-width: 1080px) {
+    padding-top: 3rem;
   }
 `;
