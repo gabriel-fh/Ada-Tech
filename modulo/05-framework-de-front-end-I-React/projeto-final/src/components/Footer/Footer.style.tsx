@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
-  padding: 1rem ;
+  padding: 1rem;
   background-color: #fea58d;
   text-align: center;
 
   @media screen and (min-width: 768px) {
     padding: 1.5rem;
   }
-
 `;
 
 export const FooterSpan = styled.span`
@@ -22,5 +21,4 @@ export const FooterSpan = styled.span`
     font-size: 1.6rem;
     font-weight: 600;
   }
-
 `;

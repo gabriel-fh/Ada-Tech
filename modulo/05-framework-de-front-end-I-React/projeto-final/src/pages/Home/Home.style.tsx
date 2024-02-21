@@ -47,7 +47,6 @@ export const ImageContent = styled.div`
     padding-right: 5rem;
     justify-content: none;
   }
-
 `;
 
 export const MainImage = styled.img`
