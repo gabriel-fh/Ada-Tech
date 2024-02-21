@@ -7,6 +7,7 @@ import {
   SubTitle,
 } from "../PagesStyles/PagesStyles";
 import {
+  CategoriesContent,
   FilterContent,
   FilterItem,
   ResponseSearch,
@@ -30,7 +31,6 @@ const Search = () => {
 
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Recipe[] | null>(null);
-  const [isSearching, setIsSearching] = useState<boolean>(false);
   const navigate: NavigateFunction = useNavigate();
   const { name } = useParams();
 
@@ -83,30 +83,35 @@ const Search = () => {
 
   useEffect(() => {
     if (searchTerm.length > 2) {
-      setIsSearching(true);
       setSearchResults(searchRecipe(searchTerm, "title"));
     } else if (name) {
-      setIsSearching(true);
       setSearchResults(searchByCategory(name.split("-").join(" ")));
     } else {
-      setIsSearching(false);
       setSearchResults(null);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm, name]);
+  console.log('s')
 
   return (
     <Main>
       <Section>
-        <SearchBarContent>
+        <SearchBarContent >
           <SearchBar
             type="text"
             placeholder="Pesquisar..."
             value={searchTerm}
             onChange={handleChangeInput}
+            id="1"
           />
           <StyledIcon icon={"tabler:search"} inline />
-          {searchTerm && <StyledIcon icon={"ic:round-close"} inline onClick={() => setSearchTerm('')} />}
+          {searchTerm && (
+            <StyledIcon
+              icon={"ic:round-close"}
+              inline
+              onClick={() => setSearchTerm("")}
+            />
+          )}
         </SearchBarContent>
         {name && !searchTerm && (
           <FilterContent>
@@ -121,10 +126,22 @@ const Search = () => {
           </FilterContent>
         )}
         <SearchResults>
-          {searchTerm.length > 0 && searchTerm.length < 3 ? (
-            <ResponseSearch>Digite no mínimo 3 caracteres</ResponseSearch>
-          ) : searchResults ? (
-            searchResults.length > 0 ? (
+          {searchTerm.length < 3 && !name ? (
+            <CategoriesContent>
+              <SubTitle>
+                Navegue por <HighlightedText>categorias</HighlightedText>
+              </SubTitle>
+              <CategoriesContainer>
+                {categoryData.map((item, index) => (
+                  <StyledLink to={`/search/${getSlug(item.name)}`} key={index}>
+                    <CategorieCard image={item.image} name={item.name} />
+                  </StyledLink>
+                ))}
+              </CategoriesContainer>
+            </CategoriesContent>
+          ) : (
+            searchResults &&
+            (searchResults.length > 0 ? (
               searchResults.map((item) => (
                 <StyledLink
                   to={`/recipe/${encodeURI(getSlug(item.title))}/${item.id}`}
@@ -134,33 +151,16 @@ const Search = () => {
                     title={item.title}
                     prepTime={item.prepTime}
                     servings={item.servings}
-                    image={item.image} description={item.ingredients}                  />
+                    image={item.image}
+                    description={item.ingredients}
+                  />
                 </StyledLink>
               ))
             ) : (
               <ResponseSearch>
                 Não foi possível encontrar a receita pesquisada.
               </ResponseSearch>
-            )
-          ) : (
-            !searchResults &&
-            !isSearching && (
-              <>
-                <SubTitle>
-                  Navegue por <HighlightedText>categorias</HighlightedText>
-                </SubTitle>
-                <CategoriesContainer>
-                  {categoryData.map((item, index) => (
-                    <StyledLink
-                      to={`/search/${getSlug(item.name)}`}
-                      key={index}
-                    >
-                      <CategorieCard image={item.image} name={item.name} />
-                    </StyledLink>
-                  ))}
-                </CategoriesContainer>
-              </>
-            )
+            ))
           )}
         </SearchResults>
       </Section>

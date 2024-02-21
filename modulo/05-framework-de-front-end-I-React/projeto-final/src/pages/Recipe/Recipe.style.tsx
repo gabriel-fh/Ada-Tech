@@ -192,7 +192,7 @@ export const IngredientsContent = styled.div`
   gap: 0.7rem;
 
   @media screen and (min-width: 768px) {
-    gap: 1rem;
+    gap: 2rem;
   }
 
   @media screen and (min-width: 1024px) {
@@ -262,11 +262,7 @@ export const ListContent = styled.ol`
   display: grid;
   place-items: start;
   gap: 1.2rem;
-  padding: 3rem 0;
-
-
-
-
+  padding: 3rem 2rem;
 `;
 
 export const ListItem = styled.li`
@@ -280,7 +276,7 @@ export const ListItem = styled.li`
 
   @media screen and (min-width: 768px) {
     font-size: 1.8rem;
-    margin-bottom: 1.5rem
+    margin-bottom: 1.5rem;
   }
   @media screen and (min-width: 1440px) {
     font-size: 2rem;

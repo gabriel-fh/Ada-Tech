@@ -52,7 +52,7 @@ export const CardDescription = styled.div`
   height: 100%;
 
   @media screen and (min-width: 1024px) {
-    padding: .7rem;
+    padding: 0.7rem;
   }
 `;
 
@@ -128,7 +128,6 @@ export const CardDesc = styled.span`
   display: -webkit-box;
 
   @media screen and (min-width: 1024px) {
-    font-size: 1.4rem
+    font-size: 1.4rem;
   }
-
 `;

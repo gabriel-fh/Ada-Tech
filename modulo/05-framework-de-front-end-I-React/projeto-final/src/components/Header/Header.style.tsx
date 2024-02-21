@@ -20,14 +20,12 @@ export const StyledHeader = styled.header`
   }
 
   @media screen and (min-width: 1024px) {
-    padding: .2rem 2rem;
+    padding: 0.2rem 2rem;
   }
 
   @media screen and (min-width: 1440px) {
-    padding: .2rem 3.7rem;
+    padding: 0.2rem 3.7rem;
   }
-
-  
 `;
 export const Logo = styled.div`
   display: flex;

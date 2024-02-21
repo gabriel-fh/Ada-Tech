@@ -8,6 +8,10 @@ export const Main = styled.main`
   @media screen and (min-width: 768px) {
     padding: 8rem 0;
   }
+
+  @media screen and (min-width: 1024px) {
+    min-height: 93.1vh;
+  }
 `;
 
 export const Section = styled.section`
