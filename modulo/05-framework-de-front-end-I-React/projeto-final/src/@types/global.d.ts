@@ -11,3 +11,12 @@ interface Recipe {
   glutenFree: boolean;
   videoUrl?: string | null;
 }
+
+
+interface ExtraInfo {
+  condition: boolean | undefined;
+  text: string;
+  color: string;
+  link?: string | null;
+  icon?: string;
+}

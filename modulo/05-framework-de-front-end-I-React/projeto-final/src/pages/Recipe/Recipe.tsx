@@ -24,16 +24,49 @@ import { formatPrepTime } from "../../utils/utils";
 import { StyleSheetManager } from "styled-components";
 
 const Recipe = () => {
-  const data: Recipe[] = recipesData.recipes;
-
   const { id } = useParams();
-
-  const currentRecipe: Recipe | undefined = data.find(
+  const recipes: Recipe[] = recipesData.recipes;
+  const currentRecipe: Recipe | undefined = recipes.find(
     (item) => item.id === Number(id)
   );
-  const [checkedItems, setCheckedItems] = useState<boolean[]>(
-    new Array(currentRecipe?.ingredients.length).fill(false)
-  );
+
+  const initialCheckedItems = currentRecipe
+    ? new Array(currentRecipe.ingredients.length).fill(false)
+    : [];
+    
+  const [checkedItems, setCheckedItems] =
+    useState<boolean[]>(initialCheckedItems);
+
+  if (!currentRecipe) return <>Error</>;
+
+  const extras: ExtraInfo[] = [
+    {
+      condition: currentRecipe.vegetarian,
+      text: "Vegetariano",
+      color: "#2a742a",
+    },
+    {
+      condition: currentRecipe.glutenFree,
+      text: "Sem glúten",
+      color: "#74702a",
+    },
+    {
+      condition: !!currentRecipe.videoUrl,
+      text: "Ver vídeo",
+      color: "#616161",
+      link: currentRecipe.videoUrl,
+      icon: "solar:play-bold",
+    },
+  ];
+
+  const recipeInfos: { icon: string; text: string | undefined }[] = [
+    {
+      icon: "mingcute:time-fill",
+      text: formatPrepTime(currentRecipe.prepTime || ""),
+    },
+    { icon: "streamline:serving-dome-solid", text: currentRecipe.servings },
+    { icon: "iconamoon:category-fill", text: currentRecipe.category },
+  ];
 
   const handleCheckboxChange = (index: number): void => {
     const newCheckedItems = [...checkedItems];
@@ -44,89 +77,74 @@ const Recipe = () => {
   return (
     <Main>
       <Section>
-        {currentRecipe ? (
-          <>
-            <RecipeTitle>{currentRecipe.title}</RecipeTitle>
-            <RecipeImageContent>
-              <RecipeImage src={currentRecipe.image}></RecipeImage>
-            </RecipeImageContent>
-            <RecipeInfos>
-              <RecipeInfosContent>
-                <RecipeInfoSpan>
-                  <Icon icon="mingcute:time-fill" inline />
-                  {formatPrepTime(currentRecipe.prepTime)}
-                </RecipeInfoSpan>
-                <RecipeInfoSpan>
-                  <Icon icon="streamline:serving-dome-solid" />
-                  {currentRecipe.servings}
-                </RecipeInfoSpan>
-                <RecipeInfoSpan>
-                  <Icon icon="iconamoon:category-fill" />
-                  {currentRecipe.category}
-                </RecipeInfoSpan>
-              </RecipeInfosContent>
-              {(currentRecipe.vegetarian ||
-                currentRecipe.glutenFree ||
-                currentRecipe.videoUrl) && (
-                <RecipeConditionals>
-                  {currentRecipe.vegetarian && (
-                    <ExtraInfo color="#2a742a">Vegetariano</ExtraInfo>
-                  )}
-                  {currentRecipe.glutenFree && (
-                    <ExtraInfo color="#74702a">Sem glutém</ExtraInfo>
-                  )}
-                  {currentRecipe.videoUrl && (
-                    <ExtraInfo color="#616161">
-                      <a href={currentRecipe.videoUrl}>
-                        <Icon icon="solar:play-bold" inline />
-                        Ver video
+        <RecipeTitle>{currentRecipe.title}</RecipeTitle>
+        <RecipeImageContent>
+          <RecipeImage src={currentRecipe.image}></RecipeImage>
+        </RecipeImageContent>
+        <RecipeInfos>
+          <RecipeInfosContent>
+            {recipeInfos.map((info, index) => (
+              <RecipeInfoSpan key={index}>
+                <Icon icon={info.icon} inline />
+                {info.text}
+              </RecipeInfoSpan>
+            ))}
+          </RecipeInfosContent>
+          <RecipeConditionals>
+            {extras.map(
+              (extra, index) =>
+                extra.condition && (
+                  <ExtraInfo key={index} color={extra.color}>
+                    {extra.link ? (
+                      <a href={extra.link}>
+                        <Icon icon={extra.icon || ""} inline />
+                        {extra.text}
                       </a>
-                    </ExtraInfo>
-                  )}
-                </RecipeConditionals>
-              )}
-            </RecipeInfos>
-            <Ingredientsinstructions>
-              <RecipeInfoList>
-                <RecipeTitle>Ingredientes</RecipeTitle>
-                <IngredientsContent>
-                  {currentRecipe.ingredients.map((item, index) => (
-                    <StyleSheetManager
-                      shouldForwardProp={(prop) =>
-                        prop !== checkedItems[index].toString()
-                      }
-                      key={index}
-                    >
-                      <IngredientLabel
-                        key={index}
-                        ischecked={checkedItems[index].toString()}
-                        htmlFor={index.toString()}
-                      >
-                        <CheckBox
-                          type="checkbox"
-                          id={index.toString()}
-                          checked={checkedItems[index]}
-                          onChange={() => handleCheckboxChange(index)}
-                        />
-                        {item}
-                      </IngredientLabel>
-                    </StyleSheetManager>
-                  ))}
-                </IngredientsContent>
-              </RecipeInfoList>
-              <RecipeInfoList>
-                <RecipeTitle>Modo de Preparo</RecipeTitle>
-                <ListContent>
-                  {currentRecipe.instructions.map((item, index) => (
-                    <ListItem key={index}>{item}</ListItem>
-                  ))}
-                </ListContent>
-              </RecipeInfoList>
-            </Ingredientsinstructions>
-          </>
-        ) : (
-          <>Error</>
-        )}
+                    ) : (
+                      extra.text
+                    )}
+                  </ExtraInfo>
+                )
+            )}
+          </RecipeConditionals>
+        </RecipeInfos>
+        <Ingredientsinstructions>
+          <RecipeInfoList>
+            <RecipeTitle>Ingredientes</RecipeTitle>
+            <IngredientsContent>
+              {currentRecipe.ingredients.map((item, index) => (
+                <StyleSheetManager
+                  shouldForwardProp={(prop) =>
+                    prop !== checkedItems[index].toString()
+                  }
+                  key={index}
+                >
+                  <IngredientLabel
+                    key={index}
+                    ischecked={checkedItems[index].toString()}
+                    htmlFor={index.toString()}
+                  >
+                    <CheckBox
+                      type="checkbox"
+                      id={index.toString()}
+                      checked={checkedItems[index]}
+                      onChange={() => handleCheckboxChange(index)}
+                    />
+                    {item}
+                  </IngredientLabel>
+                </StyleSheetManager>
+              ))}
+            </IngredientsContent>
+          </RecipeInfoList>
+          <RecipeInfoList>
+            <RecipeTitle>Modo de Preparo</RecipeTitle>
+            <ListContent>
+              {currentRecipe.instructions.map((item, index) => (
+                <ListItem key={index}>{item}</ListItem>
+              ))}
+            </ListContent>
+          </RecipeInfoList>
+        </Ingredientsinstructions>
       </Section>
     </Main>
   );

@@ -91,7 +91,6 @@ const Search = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm, name]);
-  console.log('s')
 
   return (
     <Main>

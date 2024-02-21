@@ -189,7 +189,7 @@ export const IngredientsContent = styled.div`
   padding: 2rem 0;
   display: grid;
   place-items: start;
-  gap: 0.7rem;
+  gap: 1rem;
 
   @media screen and (min-width: 768px) {
     gap: 2rem;
@@ -207,8 +207,8 @@ export const IngredientsContent = styled.div`
 `;
 
 export const CheckBox = styled.input`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.7rem;
+  height: 1.7rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: 0.16rem solid #7f7f7f;
