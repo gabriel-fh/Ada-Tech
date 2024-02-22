@@ -26,12 +26,12 @@ Este é um projeto de um site de receitas feito em React com TypeScript, desenvo
 ## Imagens do projeto
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem">
-  <img src="/public/1.png" alt="Imagem 1" style="width: 200px; margin-right: 10px;">
-  <img src="/public/2.png" alt="Imagem 2" style="width: 200px; margin-right: 10px;">
-  <img src="/public/3.png" alt="Imagem 3" style="width: 200px; margin-right: 10px;">
-  <img src="/public/4.png" alt="Imagem 4" style="width: 200px; margin-right: 10px;">
-  <img src="/public/5.png" alt="Imagem 5" style="width: 200px; margin-right: 10px;">
-  <img src="/public/6.png" alt="Imagem 6" style="width: 200px; margin-right: 10px;">
-  <img src="/public/7.png" alt="Imagem 7" style="width: 200px; margin-right: 10px;">
-  <img src="/public/8.png" alt="Imagem 8" style="width: 200px; margin-right: 10px;">
+  <img src="./public/1.png" alt="Imagem 1" style="width: 200px; margin-right: 10px;">
+  <img src="./public/2.png" alt="Imagem 2" style="width: 200px; margin-right: 10px;">
+  <img src="./public/3.png" alt="Imagem 3" style="width: 200px; margin-right: 10px;">
+  <img src="./public/4.png" alt="Imagem 4" style="width: 200px; margin-right: 10px;">
+  <img src="./public/5.png" alt="Imagem 5" style="width: 200px; margin-right: 10px;">
+  <img src="./public/6.png" alt="Imagem 6" style="width: 200px; margin-right: 10px;">
+  <img src="./public/7.png" alt="Imagem 7" style="width: 200px; margin-right: 10px;">
+  <img src="./public/8.png" alt="Imagem 8" style="width: 200px; margin-right: 10px;">
 </div>
