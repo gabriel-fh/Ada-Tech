@@ -95,7 +95,7 @@ const Search = () => {
   return (
     <Main>
       <Section>
-        <SearchBarContent >
+        <SearchBarContent>
           <SearchBar
             type="text"
             placeholder="Pesquisar..."

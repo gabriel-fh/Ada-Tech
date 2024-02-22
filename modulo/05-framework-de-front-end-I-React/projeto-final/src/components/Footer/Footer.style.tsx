@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
   background-color: #fea58d;
   text-align: center;
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     padding: 1.5rem;
   }
 `;
@@ -14,10 +14,10 @@ export const FooterSpan = styled.span`
   color: ${({ theme }) => theme.colors.white};
   font-size: 1.2rem;
   font-weight: 500;
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 1.5rem;
   }
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     font-size: 1.6rem;
     font-weight: 600;
   }

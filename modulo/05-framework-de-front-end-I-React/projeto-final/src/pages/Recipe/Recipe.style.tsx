@@ -10,11 +10,11 @@ interface IngredientLabel {
 export const RecipeTitle = styled.h2`
   font-size: 1.9rem;
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 2.5rem;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     font-size: 3rem;
   }
 `;
@@ -22,7 +22,7 @@ export const RecipeTitle = styled.h2`
 export const RecipeImageContent = styled.div`
   padding: 1.5rem 0;
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     /* height: 45rem; */
     padding: 3rem 0;
   }
@@ -33,15 +33,15 @@ export const RecipeImage = styled.img`
   height: 20rem;
   border-radius: 0.5rem;
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     height: 35rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     height: 45rem;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     height: 60rem;
   }
 `;
@@ -67,7 +67,7 @@ export const RecipeInfoSpan = styled.span`
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 2rem;
     & > {
       &:nth-child(1) {
@@ -76,7 +76,7 @@ export const RecipeInfoSpan = styled.span`
       }
     }
   }
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     font-size: 2.3rem;
     & > {
       &:nth-child(1) {
@@ -94,11 +94,11 @@ export const RecipeInfosContent = styled.div`
   flex-direction: column;
   gap: 2rem;
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     gap: 3rem;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     gap: 10rem;
     flex-direction: row;
   }
@@ -109,7 +109,7 @@ export const RecipeConditionals = styled.div`
   place-items: end;
   gap: 1rem;
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     display: flex;
     gap: 3rem;
   }
@@ -132,7 +132,7 @@ export const ExtraInfo = styled.span<ExtraInfoProps>`
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 1.6rem;
   }
 `;
@@ -147,7 +147,7 @@ export const RecipeInfoList = styled.div`
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     & > {
       &:nth-child(1) {
         font-size: 2.2rem;
@@ -155,10 +155,10 @@ export const RecipeInfoList = styled.div`
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     width: 50%;
   }
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     & > {
       &:nth-child(1) {
         font-size: 2.5rem;
@@ -177,10 +177,10 @@ export const IngredientLabel = styled.label<IngredientLabel>`
     ischecked === "true" ? "line-through" : "none"};
   color: ${({ ischecked }) => (ischecked === "true" ? "#797777" : "inherit")};
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 1.8rem;
   }
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     font-size: 2rem;
   }
 `;
@@ -191,16 +191,16 @@ export const IngredientsContent = styled.div`
   place-items: start;
   gap: 1rem;
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     gap: 2rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     gap: 1.5rem;
     padding: 2.5rem 0;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     gap: 2.5rem;
     padding: 3rem 0;
   }
@@ -242,12 +242,12 @@ export const CheckBox = styled.input`
     text-decoration: line-through;
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     width: 2rem;
     height: 2rem;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     width: 2.5rem;
     height: 2.5rem;
 
@@ -274,22 +274,22 @@ export const ListItem = styled.li`
     font-weight: 700;
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     font-size: 2rem;
   }
 `;
 
 export const Ingredientsinstructions = styled.div`
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     display: flex;
     gap: 1rem;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     padding-top: 3rem;
   }
 `;

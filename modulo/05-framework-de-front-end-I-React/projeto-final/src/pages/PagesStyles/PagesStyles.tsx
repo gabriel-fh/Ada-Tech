@@ -5,11 +5,11 @@ export const Main = styled.main`
   padding: 4.9rem 0;
   min-height: 92.2vh;
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     padding: 8rem 0;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     min-height: 93.1vh;
   }
 `;
@@ -27,7 +27,7 @@ export const Section = styled.section`
     justify-content: space-between;
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     padding: 2rem 2.5rem;
 
     &.text-image {
@@ -35,7 +35,7 @@ export const Section = styled.section`
     }
   }
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     padding: 2rem 4rem;
   }
 `;
@@ -49,11 +49,11 @@ export const SubTitle = styled.h2`
   font-size: 2.1rem;
   font-weight: 600;
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 2.5rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     font-size: 2.8rem;
   }
 `;
@@ -65,7 +65,7 @@ export const CardWrapper = styled.div`
   overflow: auto;
   height: auto;
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     padding: 3rem 0.5rem;
     gap: 2.5rem;
   }
@@ -106,17 +106,13 @@ export const CategoriesContainer = styled.div`
   flex-wrap: wrap;
   gap: 1.4rem;
 
-  @media screen and (min-width: 425px) {
-    gap: 2.5rem;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     padding: 3rem 1.5rem;
     gap: 3.5rem;
     justify-content: flex-start;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     padding: 4rem 1.5rem;
     gap: 5rem;
   }

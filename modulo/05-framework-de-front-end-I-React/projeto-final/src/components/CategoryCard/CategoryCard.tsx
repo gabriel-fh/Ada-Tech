@@ -6,7 +6,7 @@ import {
   RoundedImage,
 } from "./CategoryCard.style";
 
-function CategoryCard({image, name}: {image: string, name: string}) {
+function CategoryCard({ image, name }: { image: string; name: string }) {
   return (
     <CategoryContent>
       <CategoryImage>

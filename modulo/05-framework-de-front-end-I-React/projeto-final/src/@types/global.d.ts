@@ -12,7 +12,6 @@ interface Recipe {
   videoUrl?: string | null;
 }
 
-
 interface ExtraInfo {
   condition: boolean | undefined;
   text: string;

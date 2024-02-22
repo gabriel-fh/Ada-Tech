@@ -9,12 +9,12 @@ export const Card = styled.div`
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     width: 20rem;
     height: 22rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     width: 22rem;
     height: 24rem;
   }
@@ -30,12 +30,12 @@ export const CardImage = styled.img`
   width: 19rem;
   height: 13.2rem;
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     width: 20rem;
     height: 14rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     width: 22rem;
     height: 14rem;
   }
@@ -51,7 +51,7 @@ export const CardDescription = styled.div`
   /* text-align: center; */
   height: 100%;
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     padding: 0.7rem;
   }
 `;
@@ -82,7 +82,7 @@ export const CardSpan = styled.span`
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 1.2rem;
 
     & > {
@@ -92,7 +92,7 @@ export const CardSpan = styled.span`
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     font-size: 1.3rem;
     gap: 0.7rem;
     & > {
@@ -107,10 +107,10 @@ export const CardTitle = styled.h3`
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 1.5rem;
   }
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     font-size: 1.7rem;
   }
 `;
@@ -127,7 +127,7 @@ export const CardDesc = styled.span`
   -webkit-box-orient: vertical;
   display: -webkit-box;
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     font-size: 1.4rem;
   }
 `;

@@ -33,7 +33,7 @@ const Recipe = () => {
   const initialCheckedItems = currentRecipe
     ? new Array(currentRecipe.ingredients.length).fill(false)
     : [];
-    
+
   const [checkedItems, setCheckedItems] =
     useState<boolean[]>(initialCheckedItems);
 

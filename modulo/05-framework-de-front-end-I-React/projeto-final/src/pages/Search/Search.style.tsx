@@ -8,7 +8,7 @@ export const SearchResults = styled.div`
   justify-content: center;
   gap: 2rem;
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     justify-content: flex-start;
   }
 `;
@@ -33,7 +33,7 @@ export const SearchBarContent = styled.form`
     }
   }
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     & > {
       &:nth-child(2) {
         left: 1rem;
@@ -58,7 +58,7 @@ export const SearchBar = styled.input`
   font-weight: 500;
   font-size: 1.5rem;
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     padding: 1rem 5rem;
     font-size: 1.7rem;
   }
@@ -69,7 +69,7 @@ export const StyledIcon = styled(Icon)`
   color: #4c4c4c;
   position: absolute;
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     font-size: 2.7rem;
   }
 `;
@@ -98,12 +98,12 @@ export const FilterItem = styled.span`
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     padding: 0.7rem 1rem;
     font-size: 1.7rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     & > {
       &:nth-child(1) {
         font-size: 2.7rem;
@@ -119,7 +119,7 @@ export const ResponseSearch = styled.span`
 `;
 
 export const CategoriesContent = styled.div`
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     display: grid;
     place-items: center;
 

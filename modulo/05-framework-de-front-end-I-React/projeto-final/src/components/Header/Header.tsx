@@ -38,10 +38,10 @@ function Header() {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', updateScreenWidth);
+    window.addEventListener("resize", updateScreenWidth);
 
     return () => {
-      window.removeEventListener('resize', updateScreenWidth);
+      window.removeEventListener("resize", updateScreenWidth);
     };
   }, []);
 
@@ -61,13 +61,13 @@ function Header() {
       <Navbar isOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
       {screenWidth < 1024 && (
         <HamburgerMenu
-        onClick={() => setMenuIsOpen(!menuIsOpen)}
-        className={menuIsOpen ? "isOpen" : ""}
-      >
-        <MenuLine></MenuLine>
-        <MenuLine></MenuLine>
-        <MenuLine></MenuLine>
-      </HamburgerMenu>
+          onClick={() => setMenuIsOpen(!menuIsOpen)}
+          className={menuIsOpen ? "isOpen" : ""}
+        >
+          <MenuLine></MenuLine>
+          <MenuLine></MenuLine>
+          <MenuLine></MenuLine>
+        </HamburgerMenu>
       )}
     </StyledHeader>
   );

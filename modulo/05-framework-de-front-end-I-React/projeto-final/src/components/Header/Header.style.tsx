@@ -15,15 +15,15 @@ export const StyledHeader = styled.header`
     background-color: ${({ theme }) => theme.colors.primary};
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     padding: 1.2rem 2.2rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     padding: 0.2rem 2rem;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media ${({ theme }) => theme.sizes.xl2} {
     padding: 0.2rem 3.7rem;
   }
 `;
@@ -36,12 +36,12 @@ export const Logo = styled.div`
 export const LogoImage = styled.img`
   width: 2.9rem;
   height: 2.9rem;
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     width: 3.5rem;
     height: 3.5rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     width: 4.5rem;
     height: 4.5rem;
   }
@@ -57,11 +57,11 @@ export const LogoTitle = styled.span`
     color: ${({ theme }) => theme.colors.white};
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 1.9rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     font-size: 2.5rem;
   }
 `;

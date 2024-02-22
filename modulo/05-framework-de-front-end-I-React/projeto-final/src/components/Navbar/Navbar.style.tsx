@@ -25,12 +25,12 @@ export const Nav = styled.nav<NavProps>`
     width: 50%;
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     width: 40%;
     top: 5.7rem;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     position: static;
     height: auto;
     display: flex;
@@ -47,7 +47,7 @@ export const NavgationList = styled.ul`
   flex-direction: column;
   gap: 1.7rem;
 
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     align-items: center;
     flex-direction: row;
     gap: 5rem;
@@ -64,10 +64,10 @@ export const StyledLink = styled(Link)`
   font-weight: 600;
   color: ${({ theme }) => theme.colors.white};
 
-  @media screen and (min-width: 768px) {
+  @media ${({ theme }) => theme.sizes.md} {
     font-size: 2.3rem;
   }
-  @media screen and (min-width: 1024px) {
+  @media ${({ theme }) => theme.sizes.xl} {
     font-size: 2.3rem;
     color: ${({ theme }) => theme.colors.primary};
   }
