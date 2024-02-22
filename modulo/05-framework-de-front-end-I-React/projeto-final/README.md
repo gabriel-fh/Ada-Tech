@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# Recipédia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de um site de receitas feito em React com TypeScript, desenvolvido para o projeto final do modulo 1 de  react 
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Listagem de Receitas na Home**: A página inicial exibe uma lista de receitas em cards, mostrando a imagem, nome, tempo de preparo e quantidade de porções.
 
-## Expanding the ESLint configuration
+- **Detalhes da Receita**: Ao clicar em um card de receita, o usuário é levado para a página da receita, onde pode visualizar detalhes como imagem, nome, tempo de preparo, porções, categoria, se é vegetariano, sem glúten, se possui vídeo e modo de preparo.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Navegação por Categorias**: Na página inicial e na página de pesquisa, os usuários podem navegar por categorias de receitas. Ao clicar em uma categoria, são exibidas as receitas pertencentes à categoria selecionada.
 
-- Configure the top-level `parserOptions` property like this:
+- **Pesquisa por Nome**: Na página de pesquisa, os usuários podem buscar receitas pelo nome.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- **Marcação de Ingredientes**: Na página da receita, os usuários podem marcar os ingredientes conforme forem sendo obtidos, utilizando checkboxes.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Responsividade**: O site é responsivo e se adapta a diferentes tamanhos de tela, incluindo mobile (320px), tablet (768px), laptop (1024px) e telas maiores, como 1440px.
+
+## Bibliotecas Utilizadas
+
+- **Iconify**: Para utilização de ícones.
+- **Styled Components**: Para estilização dos componentes.
+- **React Router DOM**: Para roteamento na aplicação.
+- **Unorm**: Para normalização de textos Unicode.
+
+## Imagens do projeto
+![alt text](1.png) </br> ![alt text](2.png) </br> ![alt text](3.png) </br> ![alt text](4.png) </br> ![alt text](5.png) </br> ![alt text](6.png) </br> ![alt text](7.png) </br> ![alt text](8.png)
