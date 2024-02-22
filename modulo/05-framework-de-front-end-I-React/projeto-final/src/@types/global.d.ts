@@ -12,6 +12,14 @@ interface Recipe {
   videoUrl?: string | null;
 }
 
+interface RecipeCardProps {
+  title: string;
+  prepTime: string;
+  servings: string;
+  image: string;
+  description: string[];
+}
+
 interface ExtraInfo {
   condition: boolean | undefined;
   text: string;

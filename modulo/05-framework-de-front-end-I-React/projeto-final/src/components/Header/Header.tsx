@@ -15,6 +15,7 @@ function Header() {
   const headerRef = useRef<HTMLDivElement>(null);
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
+  // Verifica se foi clicado fora do header e fecha o menu hamburger
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -33,6 +34,7 @@ function Header() {
     };
   }, [menuIsOpen]);
 
+  // Observa a largura atual da tela para mostrar ou esconder o meunu hamburger
   const updateScreenWidth = () => {
     setScreenWidth(window.innerWidth);
   };

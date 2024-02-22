@@ -11,13 +11,7 @@ import {
 } from "./RecipeCard.style";
 import { Icon } from "@iconify/react";
 
-interface RecipeCardProps {
-  title: string;
-  prepTime: string;
-  servings: string;
-  image: string;
-  description: string[];
-}
+
 
 function RecipeCard({
   title,

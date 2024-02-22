@@ -1,3 +1,5 @@
+// Estilos gerais para todas as páginas
+
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 

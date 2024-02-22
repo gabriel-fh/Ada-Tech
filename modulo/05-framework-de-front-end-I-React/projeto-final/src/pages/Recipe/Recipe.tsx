@@ -30,6 +30,7 @@ const Recipe = () => {
     (item) => item.id === Number(id)
   );
 
+  // Cria um array do tamanho da quatidade de ingredientes 
   const initialCheckedItems = currentRecipe
     ? new Array(currentRecipe.ingredients.length).fill(false)
     : [];
@@ -68,6 +69,7 @@ const Recipe = () => {
     { icon: "iconamoon:category-fill", text: currentRecipe.category },
   ];
 
+  // Executa a lógica para o funcionamento dos checkboxes e faz com que cada um seja único
   const handleCheckboxChange = (index: number): void => {
     const newCheckedItems = [...checkedItems];
     newCheckedItems[index] = !newCheckedItems[index];

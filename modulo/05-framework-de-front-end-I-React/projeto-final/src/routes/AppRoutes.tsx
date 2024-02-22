@@ -8,15 +8,17 @@ const AppRoutes = () => {
   const location = useLocation();
   const homeScrollPosition = useRef<number>(0);
 
+  // Faz com que sempre as páginas sempre comecem do topo. 
+  // Caso navegue da home pra outra página, ao voltar pra home, é retomado do lugar que parou
   useEffect(() => {
-    if (location.pathname === '/') {
+    if (location.pathname === "/") {
       window.scrollTo(0, homeScrollPosition.current);
     } else {
       homeScrollPosition.current = window.scrollY;
       window.scrollTo(0, 0);
     }
   }, [location.pathname]);
-  
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />

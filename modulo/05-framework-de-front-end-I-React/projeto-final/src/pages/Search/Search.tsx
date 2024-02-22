@@ -62,10 +62,12 @@ const Search = () => {
     },
   ];
 
+  // Obter o conteúdo do input de pesquisa
   const handleChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 
+  // Pesquisar receita pelo texto inserido no input de pesquisa
   const searchRecipe = (
     term: string,
     attribute: RecipeKey
@@ -76,17 +78,20 @@ const Search = () => {
     return filteredResults;
   };
 
+  // Pesquisar/filtra receita pela categoria selecionada
   const searchByCategory = (name: string): Recipe[] | null => {
     const filteredResults: Recipe[] | null = searchRecipe(name, "category");
     return filteredResults;
   };
 
   useEffect(() => {
+    // Começa a realizar a pesquisa depois de 2 caracteres no input de pesquisa 
     if (searchTerm.length > 2) {
       setSearchResults(searchRecipe(searchTerm, "title"));
     } else if (name) {
       setSearchResults(searchByCategory(name.split("-").join(" ")));
     } else {
+      // Quando o input está vazio para encerra o processo de pesquisa
       setSearchResults(null);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

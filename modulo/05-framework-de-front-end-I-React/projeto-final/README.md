@@ -1,6 +1,6 @@
 # Recipédia
 
-Este é um projeto de um site de receitas feito em React com TypeScript, desenvolvido para o projeto final do modulo 1 de react
+Este é um projeto de um site de receitas feito em React com TypeScript, desenvolvido para o projeto final do modulo 1 de React
 
 ## Funcionalidades
 

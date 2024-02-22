@@ -1,10 +1,12 @@
 import unorm from "unorm";
 
+// Devolve um slug formatado
 export const getSlug = (text: string): string  => {
   const noAccents = unorm.nfd(text).replace(/[\u0300-\u036f]/g, "");
   return noAccents.toLowerCase().split(" ").join("-");
 };
 
+// Devolve o tempo de preparo formatado
 export const formatPrepTime = (prepTime: string): string => {
   const splitedPrepTime: string[] = prepTime.split(" ");
   let hour: number = 0;
