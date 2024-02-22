@@ -1,6 +1,6 @@
 # Recipédia
 
-Este é um projeto de um site de receitas feito em React com TypeScript, desenvolvido para o projeto final do modulo 1 de  react 
+Este é um projeto de um site de receitas feito em React com TypeScript, desenvolvido para o projeto final do modulo 1 de react
 
 ## Funcionalidades
 
@@ -24,4 +24,14 @@ Este é um projeto de um site de receitas feito em React com TypeScript, desenvo
 - **Unorm**: Para normalização de textos Unicode.
 
 ## Imagens do projeto
-![alt text](1.png) </br> ![alt text](2.png) </br> ![alt text](3.png) </br> ![alt text](4.png) </br> ![alt text](5.png) </br> ![alt text](6.png) </br> ![alt text](7.png) </br> ![alt text](8.png)
+
+<div style="display: flex; flex-wrap: wrap; gap: 2rem">
+  <img src="/public/readmeImages/1.png" alt="Imagem 1" style="width: 200px; margin-right: 10px;">
+  <img src="/public/readmeImages/2.png" alt="Imagem 2" style="width: 200px; margin-right: 10px;">
+  <img src="/public/readmeImages/3.png" alt="Imagem 3" style="width: 200px; margin-right: 10px;">
+  <img src="/public/readmeImages/4.png" alt="Imagem 4" style="width: 200px; margin-right: 10px;">
+  <img src="/public/readmeImages/5.png" alt="Imagem 5" style="width: 200px; margin-right: 10px;">
+  <img src="/public/readmeImages/6.png" alt="Imagem 6" style="width: 200px; margin-right: 10px;">
+  <img src="/public/readmeImages/7.png" alt="Imagem 7" style="width: 200px; margin-right: 10px;">
+  <img src="/public/readmeImages/8.png" alt="Imagem 8" style="width: 200px; margin-right: 10px;">
+</div>
