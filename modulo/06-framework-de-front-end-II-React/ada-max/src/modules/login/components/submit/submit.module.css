@@ -1,0 +1,49 @@
+.button {
+  align-items: center;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 100ms cubic-bezier(0, 0, 0.34, 1) 0s;
+  min-height: auto;
+  min-width: 136px;
+  padding: 6px 16px 7px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: relative;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.button--with-icon {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:disabled {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+}
+
+.buttonLarge {
+  padding: 24px 16px;
+  font-size: 40px;
+}
