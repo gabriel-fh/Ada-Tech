@@ -1,0 +1,27 @@
+.Container {
+  margin: 0 auto;
+  max-width: 600px;
+  color: #000;
+  background-color: #fff;
+}
+
+.Header {
+  padding: 24px;
+  text-align: center;
+  background-color: #ff00aa67;
+  border: 2px dotted #f0f0f0;
+}
+
+.Main {
+  padding: 24px;
+  text-align: center;
+  background-color: #00ff2f67;
+  border: 2px dotted #f0f0f0;
+}
+
+.Footer {
+  padding: 24px;
+  text-align: center;
+  background-color: #3940c367;
+  border: 2px dotted #f0f0f0;
+}

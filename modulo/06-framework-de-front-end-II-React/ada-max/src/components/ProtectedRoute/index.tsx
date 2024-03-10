@@ -1,16 +1,18 @@
 import { Navigate } from "react-router-dom";
-import { useUserData } from "../../hooks/use-user-data";
+import { ROUTES } from "../../constants";
+import { Role } from "../../types";
+import { useAuth } from "../../providers/AuthProvider";
 
 type Props = {
   children: React.ReactNode;
-  role: "user" | "admin";
+  role: Role;
 };
 
 export const ProtectedRoute = ({ children, role }: Props) => {
-  const user = useUserData();
+  const { user } = useAuth();
 
   if (!user?.role || user.role !== role) {
-    return <Navigate to="/login" />;
+    return <Navigate to={ROUTES.LOGIN} />;
   }
 
   return children;

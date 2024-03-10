@@ -63,3 +63,21 @@ export const IconWarning = () => {
     </svg>
   );
 };
+
+export const IconEdit = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      stroke="currentColor"
+      viewBox="0 0 20 20"
+      role="img"
+    >
+      <path
+        clipRule="evenodd"
+        d="M4.792 12.746V15h2.253l8.125-8.125-2.253-2.254zm2.46 3.754a1 1 0 0 0 .707-.293l8.626-8.625a1 1 0 0 0 0-1.414l-2.961-2.96a1 1 0 0 0-1.415 0l-8.625 8.624a1 1 0 0 0-.292.707V16.5z"
+        fillRule="evenodd"
+      ></path>
+    </svg>
+  );
+};

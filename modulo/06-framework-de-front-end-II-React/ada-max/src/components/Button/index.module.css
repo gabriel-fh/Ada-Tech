@@ -9,25 +9,47 @@
   min-height: auto;
   min-width: 136px;
   padding: 6px 16px 7px;
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  position: relative;
 
   background-color: rgba(255, 255, 255, 0.8);
   color: #000;
   font-weight: 600;
+
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
 }
 
 .button:hover {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.button--with-icon {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
+.subtle {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+
+.subtle:hover {
+  background-color: rgba(134, 151, 206, 0.3);
+}
+
+.filled {
+  background-color: rgba(134, 151, 206, 0.3);
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+
+.filled:hover {
+  background-color: rgba(134, 151, 206, 0.5);
+}
+
+.filled:active {
+  background-color: rgba(134, 151, 206, 0.2);
+  opacity: 0.8;
+}
+
+.fullWidth {
+  width: 100%;
 }
 
 .button:disabled {
@@ -41,9 +63,4 @@
   top: 50%;
   right: 6px;
   transform: translateY(-50%);
-}
-
-.buttonLarge {
-  padding: 24px 16px;
-  font-size: 40px;
 }

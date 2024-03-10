@@ -1,4 +1,3 @@
-import { Avatar } from "../types";
 import axios from "axios";
 
 export const api = axios.create({
@@ -12,14 +11,3 @@ api.interceptors.request.use((config) => {
   }
   return config;
 });
-
-export const apiPostSignIn = (email: string, password: string) => {
-  return api.post<{ token: string }>("/api/signIn", {
-    email,
-    password,
-  });
-};
-
-export const getAvatars = () => {
-  return api.get<Avatar[]>("/api/avatar");
-};
