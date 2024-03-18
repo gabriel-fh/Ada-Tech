@@ -1,13 +1,11 @@
 import { Avatar, Button, Loader, Title } from "../../../components";
 
 import { Link } from "react-router-dom";
-import { useGetProfiles } from "../hooks/use-get-profiles";
 import { useProfile } from "./hooks/use-profile";
 
 export const Profile = () => {
-  const { data, isLoading } = useGetProfiles();
-
-  const { goToPage, isEditing, toggleEditing } = useProfile();
+  const { profiles, goToPage, isEditing, toggleEditing, isLoading } =
+    useProfile();
 
   return (
     <>
@@ -17,7 +15,7 @@ export const Profile = () => {
 
           {/* TODO: componentizar esses aqui */}
           <div className="avatars">
-            {data?.map((profile) => (
+            {profiles?.map((profile) => (
               <button
                 className="avatar__item"
                 key={profile.id}

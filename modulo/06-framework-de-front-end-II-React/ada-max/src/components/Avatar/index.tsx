@@ -6,7 +6,7 @@ import user from "../../assets/user.svg";
 type AvatarProps = {
   image?: string;
   isEdit?: boolean;
-  size?: "medium" | "large";
+  size?: "medium" | "large" | "small";
   disabled?: boolean;
 };
 
@@ -20,7 +20,7 @@ export const Avatar = ({
   return (
     <div
       className={clsx(styles.container, {
-        [styles.large]: size === "large",
+        [styles[size]]: true,
         [styles.disabled]: disabled,
       })}
     >
